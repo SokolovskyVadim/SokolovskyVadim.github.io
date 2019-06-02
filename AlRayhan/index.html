@@ -39,6 +39,7 @@
             background-color: #353541;
             height: 568px;
         }
+
         .header2 {
             background-color: #353541;
             height: 568px;
@@ -107,16 +108,17 @@
             margin-right: 168px;
             cursor: pointer;
         }
-
         .colorgray {
             background-color: #f9f9f9;
         }
+
         .colorgray2 {
             background-color: #f9f9f9;
             height: 635.34px;
             margin: 0 auto;
             width: 1120px;
         }
+
         .AboutMe {
             width: 146px;
             color: #3e3e3e;
@@ -348,6 +350,7 @@
             height: 500px;
 
         }
+
         .myskillsBG2 {
             background-color: #353541;
             margin-top: 90px;
@@ -468,8 +471,9 @@
             line-height: 15px;
 
         }
-        .message{
-            float: right; 
+
+        .message {
+            float: right;
             padding-left: 20px;
         }
 
@@ -503,35 +507,73 @@
             color: #3e3e3e;
             width: 36%
         }
+
         A:visited {
             color: #3e3e3e;
         }
+
         .contacnts h3 {
             font-size: 22px
         }
+
         .location {
-        background: url("img/Home.png") left center no-repeat;
-        padding-left: 75px;
-        
-    }
+            background: url("img/Home.png") left center no-repeat;
+            padding-left: 75px;
+
+        }
+
         .Email {
             background: url('img/Mail_2.png') left center no-repeat;
             padding-left: 75px;
         }
+
         .Call {
             background: url('img/Phone_2.png') left center no-repeat;
             padding-left: 75px;
         }
-        .social{
+
+        .social {
             display: block;
             color: black;
             padding-top: 35px;
             margin: 0 auto;
             text-align: center;
         }
-        .Allrights{
+
+        .Allrights {
             padding-top: 17px;
         }
+
+        div.MenuLevel1>div:hover div.MenuLevel2 {
+            display: block;
+            position: absolute;
+            margin-left: 116px;
+            margin-top: 46px;
+            z-index: 1;
+           
+        }
+
+        div.MenuLevel2 {
+            width: 150px;
+            display: none;
+           
+        }
+
+        div.MenuLevel2>div {
+            background-color: whitesmoke;
+            border-bottom: solid #fb6470 5px;
+            border-radius: 10px;
+            cursor: pointer;
+            height: 30px;
+            margin-bottom: 3px;
+            padding-top: 15px;
+            text-align: center;
+        }
+        .nonedicor {
+            text-decoration: none;
+            
+        }
+
     </style>
 </head>
 
@@ -539,21 +581,35 @@
     <div class="header">
         <div class="header2">
             <div class="conteiner clearfix">
-                <div>
-                    <img src="img/hamburger.png" alt=" Button" class="button1">
-                </div>
-                <div class="padAlRayhan">
-                    <div class="headertop clearfix">
-                        <h1 class="AlRayhan">Al Rayhan</h1>
-                        <div style="clear: both"></div>
-                        <p class="UI">#Ui/ux Expert | #Graphic Designer</p>
+                <div class='MenuLevel1'>
+                    <div>
                     </div>
-                    <div class="hereme"><a href="#AboutMe" class="a1" style="color: #ffffff">Here me!</a>
+                    <div>
+                        <img src="img/hamburger.png" alt=" Button" class="button1" style="position: absolute;">
+                        <div class='MenuLevel2'>
+                            <div><a href="#AboutMe" class="nonedicor"><span>About Me</span></a></div>
+                            <div><a href="#WorkExperience" class="nonedicor">Work Experience</a></div>
+                            <div><a href="#Education" class="nonedicor">Education</a></div>
+                            <div><a href="#MySkils" class="nonedicor">My Skils</a></div>
+                            <div><a href="#LeaveaMessage" class="nonedicor">Leave a Message</a></div>
+                        </div>
                     </div>
                 </div>
             </div>
+        
+            <div class="padAlRayhan">
+                <div class="headertop clearfix">
+                    <h1 class="AlRayhan">Al Rayhan</h1>
+                    <div style="clear: both"></div>
+                    <p class="UI">#Ui/ux Expert | #Graphic Designer</p>
+                </div>
+                <div class="hereme"><a href="#AboutMe" class="a1" style="color: #ffffff">Here me!</a>
+                </div>
+            </div>
         </div>
-    </div>    
+    </div>
+    </div>
+    </div>
     <div class="colorgray clearfix">
         <div class="colorgray2">
             <div class="conteiner clearfix">
@@ -564,7 +620,8 @@
                     <div class="line1">
                     </div>
                     <div class="text1">
-                        Lorem ipsum dolor sit amet, ectetuer nonummy nibh euismod tincidunt ut laoreet magna laoreet aliquam
+                        Lorem ipsum dolor sit amet, ectetuer nonummy nibh euismod tincidunt ut laoreet magna laoreet
+                        aliquam
                         erat volutpat.
                     </div>
                     <div class="rectangle">
@@ -582,15 +639,16 @@
                         <p class="p1"><span class="font1">Web</span><span> : deviserweb.com</span></p>
                     </div>
                     <div class="bolttext1">
-                        <p class="p1"><span class="font1">Address</span><span> : 24, Golden Street, New Castle</span></p>
+                        <p class="p1"><span class="font1">Address</span><span> : 24, Golden Street, New Castle</span>
+                        </p>
                     </div>
                 </div>
             </div>
-        </div>  
+        </div>
     </div>
     <div class="conteiner clearfix">
         <div class="padding1">
-            <div class="WorkExperience">
+            <div class="WorkExperience" id="WorkExperience">
                 Work Experience
             </div>
             <div class="line1">
@@ -630,7 +688,7 @@
     <hr class="conteiner hr">
     <div class="conteiner clearfix">
         <div class="padding1">
-            <div class="WorkExperience">
+            <div class="WorkExperience" id="Education">
                 Education
             </div>
             <div class="line1">
@@ -671,8 +729,8 @@
         <div class="myskillsBG2">
             <div class="conteiner clearfix">
                 <div class="padding1">
-                    <div class="myskills">
-                        Education
+                    <div class="myskills" id="MySkils">
+                        My Skils
                     </div>
                     <div class="line1">
                     </div>
@@ -758,7 +816,7 @@
         <div class="padding1">
             <div class="paddingtop">
                 <div style="float: left ">
-                    <div class="textlm">
+                    <div class="textlm" id="LeaveaMessage">
                         Leave a Message
                     </div>
                     <div>
@@ -773,23 +831,31 @@
                             <input type="text" title="Message" placeholder="Message*">
                         </div><br>
                         <div class="hereme2 clearfix">
-                                Here me!
+                            Here me!
                         </div>
                     </div>
                 </div>
                 <div class="contacts clearfix A:visited">
-                    <a href="https://www.google.com/maps/place/%D0%9C%D0%B8%D0%BD%D1%81%D0%BA/@53.8835622,27.4395527,10z/data=!3m1!4b1!4m5!3m4!1s0x46dbcfd35b1e6ad3:0xb61b853ddb570d9!8m2!3d53.9045398!4d27.5615244" target="_blank" style="text-decoration: none"><div class="location">
-                        <h3>Location</h3>
-                        <p>324, Golden Tower, Amborkhana, Sylhet</p>
-                    </div></a>
-                    <a href="https://mail.google.com/" target="_blank" style="text-decoration: none"><div class="Email">
-                        <h3>Email</h3>
-                        <p>junaed@deviserweb.com</p>
-                    </div></a>
-                    <a href="https://www.kinopoisk.ru/film/zvonok-2002-804/" target="_blank" style="text-decoration: none"><div class="Call">
-                        <h3>Toll Free Call</h3>
-                        <p>0800 234 6578 </p>
-                    </div></a>
+                    <a href="https://www.google.com/maps/place/%D0%9C%D0%B8%D0%BD%D1%81%D0%BA/@53.8835622,27.4395527,10z/data=!3m1!4b1!4m5!3m4!1s0x46dbcfd35b1e6ad3:0xb61b853ddb570d9!8m2!3d53.9045398!4d27.5615244"
+                        target="_blank" style="text-decoration: none">
+                        <div class="location">
+                            <h3>Location</h3>
+                            <p>324, Golden Tower, Amborkhana, Sylhet</p>
+                        </div>
+                    </a>
+                    <a href="https://mail.google.com/" target="_blank" style="text-decoration: none">
+                        <div class="Email">
+                            <h3>Email</h3>
+                            <p>junaed@deviserweb.com</p>
+                        </div>
+                    </a>
+                    <a href="https://www.kinopoisk.ru/film/zvonok-2002-804/" target="_blank"
+                        style="text-decoration: none">
+                        <div class="Call">
+                            <h3>Toll Free Call</h3>
+                            <p>0800 234 6578 </p>
+                        </div>
+                    </a>
 
                 </div>
             </div>
@@ -799,11 +865,14 @@
     <div class="conteiner cleafix">
         <div class="social">
             <div>
-                <a href="https://twitter.com/home?lang=ru"><img src="img/Twitter.png" target="_blank" alt="Twitter"  style="padding-right: 7px"></a>
-                    <span>&#124;</span>
-                <a href="https://www.skype.com/ru/"><img src="img/Skype.png" target="_blank" alt="Skype"  style="padding-right: 7px; padding-left: 7px"></a>
-                    <span>&#124;</span>
-                <a href="https://dribbble.com/"><img src="img/Dribbble_3.png" target="_blank" alt="Dribbble" style="padding-left: 7px"></a>
+                <a href="https://twitter.com/home?lang=ru"><img src="img/Twitter.png" target="_blank" alt="Twitter"
+                        style="padding-right: 7px"></a>
+                <span>&#124;</span>
+                <a href="https://www.skype.com/ru/"><img src="img/Skype.png" target="_blank" alt="Skype"
+                        style="padding-right: 7px; padding-left: 7px"></a>
+                <span>&#124;</span>
+                <a href="https://dribbble.com/"><img src="img/Dribbble_3.png" target="_blank" alt="Dribbble"
+                        style="padding-left: 7px"></a>
             </div>
             <div class="Allrights">Copyright: Junaed Ahmed, All rights reserved</div>
         </div>
