@@ -40,7 +40,7 @@
        float: right;
     }  
     .midtop {
-        max-width: 1140px;
+        width: 1140px;
         height: 40px;
         margin: 0 auto;
         background:#212121;
@@ -51,7 +51,7 @@
         border-bottom: #53515198 solid 1px;
       }  
     .midbottom {
-        max-width: 1140px;
+        width: 1140px;
         height: 66px;
         margin: 0 auto;
         text-align: justify;
@@ -167,7 +167,7 @@
     }
 
     .container {
-        max-width: 1140px;
+        width: 1140px;
         margin: 0 auto;
     }
     
