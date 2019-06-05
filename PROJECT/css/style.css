@@ -8,6 +8,9 @@
     body {
         font-family: 'Montserrat', sans-serif;
     }
+    a:link {
+        text-decoration: none;
+    }
     .scrollup{
         width:60px;
         height:60px;
@@ -28,6 +31,7 @@
     }
     header {
         background:#212121;
+        
       }
     .socialnetworks{
         float: left;
@@ -35,7 +39,6 @@
     .socialnetworks img{
         padding: 0px 10px;
     }   
-    
     .menu_header_top{
        float: right;
     }  
@@ -49,7 +52,7 @@
     .header {
         background: white;
         border-bottom: #53515198 solid 1px;
-      }  
+    }  
     .midbottom {
         width: 1140px;
         height: 66px;
@@ -86,8 +89,6 @@
     ul.menu_header_1 li{
         display: inline-block;
         margin-top: 10px;
-        
-
     }
     ul.menu_header_1 li a{
         text-decoration: none;
@@ -107,11 +108,10 @@
         padding: 0px 15px;
         font-size: 13px;
         font-weight: 700;
-        
     }
     ul.menu_header_2 {
         float: right;
-        margin: 10px 0px 0px 0px;
+        margin: 21px 0px 0px 0px;
     }
     ul.menu_header_2 > li{
         float: left;
@@ -161,13 +161,147 @@
         position: absolute;
         opacity: 1;
         top: 20px; 
+        z-index: 100;
     }
     .libolt {
         font-size: 20px;
     }
+    .jssorb051 .i {
+        position:absolute;
+        cursor:pointer;
+    }
+    .jssorb051 .i .b {
+        fill:#fff;fill-opacity:0.5;
+        stroke:#000;
+        stroke-width:400;
+        stroke-miterlimit:10;
+        stroke-opacity:0.5;}
+    .jssorb051 .i:hover .b {
+        fill-opacity:.7;
+    }
+    .jssorb051 .iav .b {
+        fill-opacity: 1;
+    }
+    .jssorb051 .i.idn {
+        opacity:.3;
+    }
+    
+    .jssora051 {
+        display:block;
+        position:absolute;
+        cursor:pointer;
+    }
+    .jssora051 .a {
+        fill:none;stroke:#fff;
+        stroke-width:360;
+        stroke-miterlimit:10;
+    }
+    .jssora051:hover {
+        opacity:.8;
+    }
+    .jssora051.jssora051dn {
+        opacity:.5;
+    }
+    .jssora051.jssora051ds {
+        opacity:.3;pointer-events:none;
+    }
+    .jssora_catalog {
 
+    }
+    
     .container {
         width: 1140px;
         margin: 0 auto;
+        padding-top: 45px;
+        text-align: center;
     }
-    
+    .container_h3 {
+        text-align: center;
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: .4px;
+    }
+    .container_line {
+        width: 60px;
+        height: 4px;
+        background: #191c1e;
+        display: inline-block;
+        margin: 23px 0 40px 0;
+    }
+    .container_goods{
+        width: 1127px;
+        height: 450px;
+        margin: auto;     
+    }
+    .product_goods {
+        width: 185px;
+        height: 320px;
+        float: left;
+        padding: 0px 20px;
+        margin: auto;
+        cursor: pointer;
+    }
+    .product_goods:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+      }
+    .img_goods {
+        width: 200px;
+        height: 290px;
+    }
+    .product_goods p:last-child {
+        color: #e84c3d;
+    }
+    .product_goods p:nth-child(3){
+        color: #212121;
+        
+    } 
+    .product_goods_hr {
+        color: #6b636388;
+        padding-bottom: 10px;
+    }
+
+    .go_to_catalog {
+        padding-top: 50px;
+        border: #212121 solid 2px;
+        padding: 20px;
+        width: 300px;
+        margin: auto;
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .go_to_catalog:hover {
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+        transition: 0.5s;
+        box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      }
+      .b_w_foto {
+       background: url('../images/orig.png');
+       height: 260px;   
+       margin-top: 80px;
+      }
+      .our_blog  {
+        background: #212121;
+        height: 944px;
+        
+      }
+      .container_h3_2 {
+        text-align: center;
+        color: white;
+        font-size: 36px;
+        font-weight: 700;
+        letter-spacing: .4px;
+        padding-top: 60px;
+    }
+    .container_line_2 {
+        width: 60px;
+        height: 4px;
+        background: white;
+        display: inline-block;
+        margin: 23px 0 40px 0;
+        text-align: center;
+    }
+        
