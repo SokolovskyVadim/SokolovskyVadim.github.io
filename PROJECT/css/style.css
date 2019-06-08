@@ -167,6 +167,17 @@
     .libolt {
         font-size: 20px;
     }
+
+    .jssor{
+        position: relative;
+        margin: 0 auto;
+        top: 0px;
+        left: 0px;
+        width: 1500px;
+        height: 325px;
+        overflow: hidden;
+    }
+    
     .jssorb051 .i {
         position:absolute;
         cursor:pointer;
