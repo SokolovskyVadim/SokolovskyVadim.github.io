@@ -14,8 +14,11 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/reset.css">
     <!-- Стили -->
+    <link rel="stylesheet" href="css/font_4_search.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media_1140.css">
+    <link rel="stylesheet" href="css/media_mobile.css">
+
 </head>
 
 <body>
@@ -121,13 +124,43 @@
                         </li>
                         <li><a href=""><i class="fas fa-cart-arrow-down libolt" alt="Корзина" title="Корзина"></i></a>
                         </li>
-                        <li><a href=""><i class="fas fa-search libolt" alt="Поиск" title="Поиск"></i></a>
+                        <li><a href=""><i class="fas fa-search libolt" alt="Поиск" title="Поиск" aria-hidden="true"></i><span class="sr-only">Поиск</span></a>
                         </li>
                     </ul>
                 </div>
             </nav>
-        </div>
+<!--Mobile menu-->
+            <div class="mobile-menu">
+                <img src="images/Logo.png" alt="Logo" title="Logo" width="50px" height="41px">
+                <a href="" style="color: #FFFFFF; position: absolute;right: 17px; top: 1px;"><i class="fas fa-cart-arrow-down libolt" alt="Корзина" title="Корзина"></i></a>
+                <a href="" style="color: #FFFFFF; position: absolute; right: 51px; top: 1px;"><i class="fas fa-sign-in-alt" alt="Войти" title="Войти"></i></a>
+                <a class="dropdown-link">&#9776;</a>
+                <ul class="mobile-dropdown">
+                    <li><a href="">ПРОКАТ</a></li>
+                    <li><a href="">СЕРВИС</a></li>
+                    <li><a href="">ДОСТАВКА И ОПЛАТА</a></li>
+                    <li><a href="">БЛОГ</a></li>
+                    <li>_______________</li>
+                    <li><a href="">ВЕЙКПАРК</a></li>
+                    <li><a href="">ПРОКАТ</a></li>
+                    <li><a href="">СЕРВИС</a></li>
+                    <li><a href="">ДОСТАВКА И ОПЛАТА</a></li>
+                    <li><a href="">БЛОГ</a></li>
+                    <li><a href="">КОНТАКТЫ</a></li>
+                    <li><a href="">НАПИСАТЬ НАМ</a></li>
+                </ul>
+            </div>
     </header>
+    <div class="container">
+        <div class="mobile_search">
+            <Label>
+                <form>
+                    <input type="search" class="mobile_input_search" placeholder="Поиск..." >
+                    <button type="button" class="mobile_button"><i class="fas fa-search libolt" alt="Поиск" title="Поиск" aria-hidden="true"></i></button>
+                </form>
+            </Label>
+        </div>
+    </div>        
     <!-- Slider -->
     <div id="slider1_container" class="jssor">
 
@@ -228,8 +261,8 @@
     <div class="container">
         <h3 class="container_h3">ВЕЙКБОРДЫ</h3>
         <div class="container_line">
-        </div>
-        <div class="container_goods">
+        </div>    
+        <div class="container_goods clearfix">
             <div class="product_goods">
                 <a href=""><img src="images/goods/wakeboards/wake1.jpg" alt="Вейкборд SLINGSHOT TERRAIN"
                         title="Вейкборд SLINGSHOT TERRAIN" class="img_goods">
@@ -276,12 +309,13 @@
                 </a>
             </div>
         </div>
+       <div class="clearfix"></div>  
         <a href="" title="ПОДРОБНЕЕ">
             <div class="go_to_catalog">
                 ПОДРОБНЕЕ
             </div>
         </a>
-
+        
         <!--Second container-->
         <div class="container">
             <h3 class="container_h3">СНОУБОРДЫ</h3>
@@ -334,6 +368,7 @@
                     </a>
                 </div>
             </div>
+            <div class="clearfix"></div>  
             <a href="" title="ПОДРОБНЕЕ">
                 <div class="go_to_catalog">
                     ПОДРОБНЕЕ
@@ -449,6 +484,7 @@
                 </div>
             </a>
         </div>
+        <div class="clearfix"></div> 
         <a href="" title="Смотреть все">
             <div class="Looking_all clearfix">
                 СМОТРЕТЬ ВСЕ
@@ -498,7 +534,7 @@
             </div>
             <div class="join_to_us_block">
                 <!-- VKWidget -->
-                <div id="vk_post_6401251_3243"></div>
+                <div id="vk_post_6401251_3243" class="mob_size"></div>
                 <script type="text/javascript" src="https://vk.com/js/api/openapi.js?160"></script>
                 <script type="text/javascript">
                     (function () {
@@ -650,20 +686,20 @@
             </div>
         </div>
     </footer>
-        <hr>
-        <div class="last_cont_bg">
-            <div class="last_cont">
-                <div class="socialnetworks_2">
-                    <a href=""><img src="images/vk.png" alt="VK" title="VK" width="36" height="36"></a>
-                    <a href=""><img src="images/inst.png" alt="Instagramm" title="Instagramm" width="36" height="36"></a>
-                    <a href=""><img src="images/fb.png" alt="FaceBook" title="FaceBook" width="36" height="36"></a>
-                </div>
-                <div class="all_rights">
-                    &#169; 2019 4-RIDE.BY. All rights reserved.
-                </div>
-            </div> 
+    <hr>
+    <div class="last_cont_bg">
+        <div class="last_cont">
+            <div class="socialnetworks_2">
+                <a href=""><img src="images/vk.png" alt="VK" title="VK" width="36" height="36"></a>
+                <a href=""><img src="images/inst.png" alt="Instagramm" title="Instagramm" width="36" height="36"></a>
+                <a href=""><img src="images/fb.png" alt="FaceBook" title="FaceBook" width="36" height="36"></a>
+            </div>
+            <div class="all_rights">
+                &#169; 2019 4-RIDE.BY. All rights reserved.
+            </div>
         </div>
-        
+    </div>
+
     <!-- скрипты -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="js/scrollup.js"></script>
@@ -673,8 +709,14 @@
 
 
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script type="text/javascript" src="js/jssor.slider.min.js"></script>
     <script type="text/javascript" src="js/1.js"></script>
+    <script type="text/javascript" src="js/search.js"></script>
+    <script type="text/javascript" src="js/mobile_menu.js"></script>
+    <script type="text/javascript" src="js/search_mobile.js"></script>
+
+
 </body>
 
 </html>

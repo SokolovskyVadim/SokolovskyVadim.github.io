@@ -216,11 +216,7 @@
     }
     .jssora051.jssora051ds {
         opacity:.3;pointer-events:none;
-    }
-    .jssora_catalog {
-
-    }
-    
+    }   
     .container {
         width: 1140px;
         margin: 0 auto;
@@ -704,4 +700,11 @@
         top: 30px;
     }
     
-
+    .mobile-menu {
+        display: none;
+    }
+    .mobile_search {
+        display: none;
+    }
+    
+    
