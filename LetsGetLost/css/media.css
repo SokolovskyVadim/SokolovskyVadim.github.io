@@ -1,0 +1,101 @@
+@media all and (max-width: 1125px) {
+    .container_yellow {
+        flex-direction: column;
+        flex-basis: auto;
+    }
+    .list_of_destination {
+        margin-left: 80px;
+    }
+}
+
+@media all and (max-width: 960px) {
+.keep_me_in_touch_input_submit {
+    left: 0px;
+}
+.keep_me_in_touch_input_in {
+    line-height: 53px;
+}
+}
+
+@media all and (max-width: 818px) {
+    .contacts_block {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .contacts {
+        margin-top: 10px;
+    }
+    .form {
+        width: 472px;
+        height: 243px;
+        flex-basis: 400px;
+    }
+    .or {
+        display: none;
+    }
+    .you_can {
+        height: 139px;
+        flex-basis: auto;
+    }
+
+}
+
+@media all and (max-width: 660px) {
+    .header {
+        flex-direction: column;
+    }
+    .logo{
+        padding-top: 20px;
+    }
+    .menu ul {
+        flex-direction: column;
+        line-height: 46px;
+    }
+    .main_text {
+        margin-top: 198px;
+    }
+    .header_button {
+        margin-bottom: 0px;
+    }
+    .keep_me_in_touch_bg {
+        flex-direction: column;
+    }      
+    .keep_me_in_touch_input {
+        flex-basis: auto;
+        margin-bottom: 10px;
+    }  
+}
+@media all and (max-width: 320px) {
+    .header_button {
+        width: 93px;
+        height: 96px;
+        text-align: center;
+    }
+    .love {
+        flex-direction: column;
+    }
+    .castle {
+        width: 100%;
+        height: 100%;
+        padding-left: 0px;
+    }
+    .text_h2 {
+        height: 174px;
+        flex-basis: auto;
+        justify-content: center;
+    }
+    .text_for_h2 {
+        font-size: 27px;
+        line-height: 25px;
+    }
+    .text_for_p {
+        font-size: 12px;
+        line-height: 32px;
+    }
+    .basic_info {
+       display: none;
+    }
+
+
+}
