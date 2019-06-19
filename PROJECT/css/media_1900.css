@@ -1,0 +1,12 @@
+@media all and (max-width: 1900px) {
+.container_gallery {    
+    width: 100%;
+}
+.container_gallery {
+    text-align: center;
+}
+.our_gallery {
+    float: none;
+}
+
+}

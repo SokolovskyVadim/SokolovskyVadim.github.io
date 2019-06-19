@@ -93,7 +93,7 @@
 .mobile_search{
 display: block;
 width: 100%;
-margin-top: 1px;  
+text-align: center;  
 }
 
 .mobile_input_search {
@@ -116,6 +116,7 @@ margin-top: 1px;
 
 /*First_container*/
 
+
 .h3_line_mob {
   width: 100%;
   margin: 10 auto;
@@ -125,12 +126,7 @@ margin-top: 1px;
   width: 100%;
   height: 1240px;
 }
-.product_goods {
-  position: relative;
-  
-}
 .img_goods {
-  width: 100px;
   height: 145px;
 }
 .product_goods {
@@ -219,7 +215,7 @@ margin: 0px;
 .mail_us_email {
   float: none;
   bottom: 0px;
-  margin: 0px;
+  margin: auto;
 }
 .mail_us_button {
   float: none;
@@ -260,9 +256,39 @@ footer {
   font-size: 10px;
 }
  
+/*wakepark*/
 
+.wake_youtube iframe{
+  width: 320px;
+  height: 180px;
+}
+/*Прокат*/ 
 
+.page_info img {
+  width: 70%;
+  display: block;
+  margin: auto;
+}
+.page_info img:nth-child(5) {
+  width: 90%;
+  height: 212px;
+}
+.page_info img:nth-child(4) {
+  width: 90%;
+  height: 212px;
+}
+.page_info h1 {
+  text-align: center;
+}
+.table_1 {
+  margin: auto;
+}
+.tabs {
+  display: block;
+  line-height: 2;
+}
+.wake_youtube iframe {
+  width: 100%;
 
-
-
+}
 }

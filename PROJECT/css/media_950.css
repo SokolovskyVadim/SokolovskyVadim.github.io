@@ -1,0 +1,22 @@
+@media all and (max-width: 1160px) {
+  .goods_list {
+    align-self: center;
+}
+.goods_icon {
+  display: flex;
+  flex-basis: auto;
+  flex-direction: column;
+}
+.reCAPTCHA_posit {
+  left: 0px;
+}
+.feed_back_input input {
+  width: 80%;
+}
+.feed_back_input textarea {
+  width: 80%;
+}
+.google_map {
+    width: 90%;
+}
+  }
