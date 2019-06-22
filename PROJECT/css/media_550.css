@@ -289,7 +289,6 @@
   }
   .page_goods {
     flex-direction: column;
-    height: 825px;
 }
   .goods_list {
     align-self: center;
@@ -297,5 +296,8 @@
   .page_info h1 {
 
     font-size: 30px;
+}
+.basket_padding {
+  height: 462px;
 }
   }
