@@ -289,6 +289,7 @@
   }
   .page_goods {
     flex-direction: column;
+    height: 825px;
 }
   .goods_list {
     align-self: center;
