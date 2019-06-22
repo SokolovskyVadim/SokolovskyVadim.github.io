@@ -300,4 +300,8 @@
 .basket_padding {
   height: 462px;
 }
+.basket_icon {
+flex-basis: auto;
+
   }
+}
