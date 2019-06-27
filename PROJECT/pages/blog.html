@@ -108,12 +108,14 @@
                         <li><a href="../pages/basket.html"><i class="fas fa-cart-arrow-down libolt" alt="Корзина" title="Корзина"></i></a>
                         </li>
                         <li>
-                            <div class="position_for_serch">
-                                <form>
-                                    <input type="text" placeholder="Искать здесь...">
-                                    <button type="submit"><i class="fas fa-search"></i></button>
-                                </form>
-                            </div>   
+                                <button onclick="getModal()"><i class="fas fa-search"></i></button>
+
+                                <div id="shadow">
+                                    
+                                    <div id="modal"><i class="fas fa-search"></i><input type="text" placeholder="Поиск"></i>
+                                        <div id="close" onclick="closeWindow()"><i class="far fa-times-circle"></i></div>
+                                    </div>
+                                </div>  
                         </li>
                     </ul>
                 </div>
