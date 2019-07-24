@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>it-incubator</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="menu">
+            <div id="burger" class="menu-btn hamburger">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <span><i class="fas fa-caret-left"></i></span>
+            </div>
+            <nav class="menu-list">
+                <ul>
+                    <li>
+                        <img src="img/1.png" alt=""><span>ToDo</span>
+                    </li>
+                    <li>
+                        <a href="index.html">
+                            <span><i class="fas fa-home"></i></span> Ноme
+                        </a>
+                    </li>
+                    <li>
+                        <a href="pages/settings.html">
+                            <span><i class="fas fa-cog"></i></span> Settings
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <section class="header">
+                <div class="sort_one">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="sort_two">
+                    <div><i class="fas fa-sort-up"></i></div>
+                    <div>AZ</div>
+                    <div><i class="fas fa-sort-down"></i></div>
+                </div>
+                <div>
+                    <button class="header_btn" onclick="openWin();">
+                        <span>+</span> Add ToDo
+                    </button>
+                    <div class="modal">
+                        <h2>Введите новую задачу:</h2>
+                        <form>
+                            <input type="text" placeholder="Заголовок"><br>
+                            <input type="text" placeholder="Описание задачи"><br>
+                            <input type="submit" value="Отправить">
+                        </form>>
+                    </div>
+                </div>
+                <div class="user">
+                    <img src="img/2.jpg" class="img_header" alt="Котик">
+                    <i class="fas fa-sort-down"></i>
+                </div>
+            </section>
+            <section class="main">
+                <div class="main_inside">
+                    <div class="headline">
+                        <div>
+                            ToDo <span>(4)</span>
+                        </div>
+                        <div>
+                            <i class="fas fa-th"></i>
+                            <i class="fas fa-th-list"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="lists_ToDo">
+                        <div class="status_info">
+                                <i class="fas fa-arrow-up status_info_margin"></i> <span class="status_info_margin">Hight Proirity</span><i class="far fa-clock status_info_margin status_info_color"></i> <span class="status_info_margin status_info_color">feb 2018 18-30</span> 
+                        </div>
+                        <div class="down_list_ToDo">
+                            <div class="box_circle">
+                                    <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+                                        <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+                                       
+                                        <g>
+                                         <title>background</title>
+                                         <rect fill="none" id="canvas_background" height="46" width="46" y="-1" x="-1"/>
+                                         <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+                                          <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+                                         </g>
+                                        </g>
+                                        <g>
+                                         <title>Layer 1</title>
+                                         <ellipse stroke="#5584ff" ry="20" rx="20" id="svg_1" cy="22.38541" cx="21.947953" stroke-width="1.5" fill="#5584ff"/>
+                                         <text stroke="#5584ff" transform="matrix(0.15935345015729238,0,0,0.15488141791476906,27.95645789944519,22.7567509878103) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="147" id="svg_2" y="45.265034" x="-73.89175" stroke-width="0" fill="#ffffff">L</text>
+                                        </g>
+                                       </svg>
+                            </div>
+                            <div class="down_list_ToDo_margin "> 
+                                <h3 class="h3_list_box">
+                                    Lorem ipsum
+                                </h3>
+                                <span>
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae at cupiditate magni doloribus dolore deserunt, sapiente excepturi asperiores quia quae neque voluptates commodi nihil minus ullam fugit cumque natus? Dolor.
+                                </span>
+                            </div>
+                            <div class="box_right">
+                                <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lists_ToDo">
+                            <div class="status_info">
+                                    <i class="fas fa-arrow-up status_info_margin"></i> <span class="status_info_margin">Hight Proirity</span><i class="far fa-clock status_info_margin status_info_color"></i> <span class="status_info_margin status_info_color">feb 2018 18-30</span> 
+                            </div>
+                            <div class="down_list_ToDo">
+                                <div class="box_circle">
+                                        <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+                                           
+                                            <g>
+                                             <title>background</title>
+                                             <rect fill="none" id="canvas_background" height="46" width="46" y="-1" x="-1"/>
+                                             <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+                                              <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+                                             </g>
+                                            </g>
+                                            <g>
+                                             <title>Layer 1</title>
+                                             <ellipse stroke="#5584ff" ry="20" rx="20" id="svg_1" cy="22.38541" cx="21.947953" stroke-width="1.5" fill="#5584ff"/>
+                                             <text stroke="#5584ff" transform="matrix(0.15935345015729238,0,0,0.15488141791476906,27.95645789944519,22.7567509878103) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="147" id="svg_2" y="45.265034" x="-73.89175" stroke-width="0" fill="#ffffff">L</text>
+                                            </g>
+                                           </svg>
+                                </div>
+                                <div class="down_list_ToDo_margin "> 
+                                    <h3 class="h3_list_box">
+                                        Lorem ipsum
+                                    </h3>
+                                    <span>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae at cupiditate magni doloribus dolore deserunt, sapiente excepturi asperiores quia quae neque voluptates commodi nihil minus ullam fugit cumque natus? Dolor.
+                                    </span>
+                                </div>
+                                <div class="box_right">
+                                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lists_ToDo">
+                                <div class="status_info">
+                                        <i class="fas fa-arrow-up status_info_margin"></i> <span class="status_info_margin">Hight Proirity</span><i class="far fa-clock status_info_margin status_info_color"></i> <span class="status_info_margin status_info_color">feb 2018 18-30</span> 
+                                </div>
+                                <div class="down_list_ToDo">
+                                    <div class="box_circle">
+                                            <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+                                                <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+                                               
+                                                <g>
+                                                 <title>background</title>
+                                                 <rect fill="none" id="canvas_background" height="46" width="46" y="-1" x="-1"/>
+                                                 <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+                                                  <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+                                                 </g>
+                                                </g>
+                                                <g>
+                                                 <title>Layer 1</title>
+                                                 <ellipse stroke="#5584ff" ry="20" rx="20" id="svg_1" cy="22.38541" cx="21.947953" stroke-width="1.5" fill="#5584ff"/>
+                                                 <text stroke="#5584ff" transform="matrix(0.15935345015729238,0,0,0.15488141791476906,27.95645789944519,22.7567509878103) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="147" id="svg_2" y="45.265034" x="-73.89175" stroke-width="0" fill="#ffffff">L</text>
+                                                </g>
+                                               </svg>
+                                    </div>
+                                    <div class="down_list_ToDo_margin "> 
+                                        <h3 class="h3_list_box">
+                                            Lorem ipsum
+                                        </h3>
+                                        <span>
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae at cupiditate magni doloribus dolore deserunt, sapiente excepturi asperiores quia quae neque voluptates commodi nihil minus ullam fugit cumque natus? Dolor.
+                                        </span>
+                                    </div>
+                                    <div class="box_right">
+                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lists_ToDo">
+                                    <div class="status_info">
+                                            <i class="fas fa-arrow-up status_info_margin"></i> <span class="status_info_margin">Hight Proirity</span><i class="far fa-clock status_info_margin status_info_color"></i> <span class="status_info_margin status_info_color">feb 2018 18-30</span> 
+                                    </div>
+                                    <div class="down_list_ToDo">
+                                        <div class="box_circle">
+                                                <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+                                                    <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+                                                   
+                                                    <g>
+                                                     <title>background</title>
+                                                     <rect fill="none" id="canvas_background" height="46" width="46" y="-1" x="-1"/>
+                                                     <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+                                                      <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+                                                     </g>
+                                                    </g>
+                                                    <g>
+                                                     <title>Layer 1</title>
+                                                     <ellipse stroke="#5584ff" ry="20" rx="20" id="svg_1" cy="22.38541" cx="21.947953" stroke-width="1.5" fill="#5584ff"/>
+                                                     <text stroke="#5584ff" transform="matrix(0.15935345015729238,0,0,0.15488141791476906,27.95645789944519,22.7567509878103) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="147" id="svg_2" y="45.265034" x="-73.89175" stroke-width="0" fill="#ffffff">L</text>
+                                                    </g>
+                                                   </svg>
+                                        </div>
+                                        <div class="down_list_ToDo_margin "> 
+                                            <h3 class="h3_list_box">
+                                                Lorem ipsum
+                                            </h3>
+                                            <span>
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae at cupiditate magni doloribus dolore deserunt, sapiente excepturi asperiores quia quae neque voluptates commodi nihil minus ullam fugit cumque natus? Dolor.
+                                            </span>
+                                        </div>
+                                        <div class="box_right">
+                                            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                    <div>
+
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                <div class="main_inside">
+                        <div class="headline">
+                            <div>
+                                Complited <span>(3)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="lists_ToDo">
+                            <div class="status_info">
+                                    <i class="fas fa-arrow-up status_info_margin"></i> <span class="status_info_margin">Hight Proirity</span><i class="far fa-clock status_info_margin status_info_color"></i> <span class="status_info_margin status_info_color">feb 2018 18-30</span> 
+                            </div>
+                            <div class="down_list_ToDo">
+                                <div class="box_circle">
+                                        <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+                                            <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+                                           
+                                            <g>
+                                             <title>background</title>
+                                             <rect fill="none" id="canvas_background" height="46" width="46" y="-1" x="-1"/>
+                                             <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+                                              <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+                                             </g>
+                                            </g>
+                                            <g>
+                                             <title>Layer 1</title>
+                                             <ellipse stroke="#5584ff" ry="20" rx="20" id="svg_1" cy="22.38541" cx="21.947953" stroke-width="1.5" fill="#5584ff"/>
+                                             <text stroke="#5584ff" transform="matrix(0.15935345015729238,0,0,0.15488141791476906,27.95645789944519,22.7567509878103) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="147" id="svg_2" y="45.265034" x="-73.89175" stroke-width="0" fill="#ffffff">L</text>
+                                            </g>
+                                           </svg>
+                                </div>
+                                <div class="down_list_ToDo_margin "> 
+                                    <h3 class="h3_list_box">
+                                        Lorem ipsum
+                                    </h3>
+                                    <span>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae at cupiditate magni doloribus dolore deserunt, sapiente excepturi asperiores quia quae neque voluptates commodi nihil minus ullam fugit cumque natus? Dolor.
+                                    </span>
+                                </div>
+                                <div class="box_right">
+                                    <a class="main-item" href="javascript:void(0);" tabindex="1"><i class="fas fa-ellipsis-v"></i></a>
+                                        <ul class="sub-menu"> 
+                                            <li><a href="#1">подпункт 1</a></li> 
+                                            <li><a href="#2">подпункт 2</a></li> 
+                                            <li><a href="#3">подпункт 3</a></li> 
+                                        </ul> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lists_ToDo">
+                                <div class="status_info">
+                                        <i class="fas fa-arrow-up status_info_margin"></i> <span class="status_info_margin">Hight Proirity</span><i class="far fa-clock status_info_margin status_info_color"></i> <span class="status_info_margin status_info_color">feb 2018 18-30</span> 
+                                </div>
+                                <div class="down_list_ToDo">
+                                    <div class="box_circle">
+                                            <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+                                                <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+                                               
+                                                <g>
+                                                 <title>background</title>
+                                                 <rect fill="none" id="canvas_background" height="46" width="46" y="-1" x="-1"/>
+                                                 <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+                                                  <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+                                                 </g>
+                                                </g>
+                                                <g>
+                                                 <title>Layer 1</title>
+                                                 <ellipse stroke="#5584ff" ry="20" rx="20" id="svg_1" cy="22.38541" cx="21.947953" stroke-width="1.5" fill="#5584ff"/>
+                                                 <text stroke="#5584ff" transform="matrix(0.15935345015729238,0,0,0.15488141791476906,27.95645789944519,22.7567509878103) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="147" id="svg_2" y="45.265034" x="-73.89175" stroke-width="0" fill="#ffffff">L</text>
+                                                </g>
+                                               </svg>
+                                    </div>
+                                    <div class="down_list_ToDo_margin "> 
+                                        <h3 class="h3_list_box">
+                                            Lorem ipsum
+                                        </h3>
+                                        <span>
+                                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae at cupiditate magni doloribus dolore deserunt, sapiente excepturi asperiores quia quae neque voluptates commodi nihil minus ullam fugit cumque natus? Dolor.
+                                        </span>
+                                    </div>
+                                    <div class="box_right">
+                                        <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="lists_ToDo">
+                                    <div class="status_info">
+                                            <i class="fas fa-arrow-up status_info_margin"></i> <span class="status_info_margin">Hight Proirity</span><i class="far fa-clock status_info_margin status_info_color"></i> <span class="status_info_margin status_info_color">feb 2018 18-30</span> 
+                                    </div>
+                                    <div class="down_list_ToDo">
+                                        <div class="box_circle">
+                                                <svg width="44" height="44" xmlns="http://www.w3.org/2000/svg">
+                                                    <!-- Created with Method Draw - http://github.com/duopixel/Method-Draw/ -->
+                                                   
+                                                    <g>
+                                                     <title>background</title>
+                                                     <rect fill="none" id="canvas_background" height="46" width="46" y="-1" x="-1"/>
+                                                     <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+                                                      <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+                                                     </g>
+                                                    </g>
+                                                    <g>
+                                                     <title>Layer 1</title>
+                                                     <ellipse stroke="#5584ff" ry="20" rx="20" id="svg_1" cy="22.38541" cx="21.947953" stroke-width="1.5" fill="#5584ff"/>
+                                                     <text stroke="#5584ff" transform="matrix(0.15935345015729238,0,0,0.15488141791476906,27.95645789944519,22.7567509878103) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="147" id="svg_2" y="45.265034" x="-73.89175" stroke-width="0" fill="#ffffff">L</text>
+                                                    </g>
+                                                   </svg>
+                                        </div>
+                                        <div class="down_list_ToDo_margin "> 
+                                            <h3 class="h3_list_box">
+                                                Lorem ipsum
+                                            </h3>
+                                            <span>
+                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae at cupiditate magni doloribus dolore deserunt, sapiente excepturi asperiores quia quae neque voluptates commodi nihil minus ullam fugit cumque natus? Dolor.
+                                            </span>
+                                        </div>
+                                        <div class="box_right">
+                                            <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+    
+                        <div>
+    
+                        </div>
+                        <div>
+    
+                        </div>
+                    </div>
+                
+            </section>
+        </div>
+    </div>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://kit.fontawesome.com/2bcb40ab28.js"></script>
+</body>
+
+</html>
