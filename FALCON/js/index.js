@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
 }); // end ready
 // КОНЕЦ МОДАЛЬНОГО ОКНА
 
-
+//поворачиваюшиеся менюшки
 (function(){
 	$('.flex-container').waitForImages(function() {
 		$('.spinner').fadeOut();
@@ -113,7 +113,8 @@ document.addEventListener('DOMContentLoaded', function() {
       $(document).ready(function(){
          $('body').append('<a href="#" id="go-top" title="Вверх">&#9650;</a>');
        });
-       
+
+//кнопка подъема вверх
        $(function() {
         $.fn.scrollToTop = function() {
          $(this).hide().removeAttr("href");
@@ -132,4 +133,18 @@ document.addEventListener('DOMContentLoaded', function() {
        $(function() {
         $("#go-top").scrollToTop();
        });
-       
+// мобильное меню
+
+$('.menu-btn').on('click', function(e) {
+   e.preventDefault();
+   $('.mobile_menu_in').toggleClass('menu-active');
+   $('.content').toggleClass('content-active');
+})
+
+//end of right menu
+
+$(document).ready(function(){
+  $(".hamburger").click(function(){
+     $(this).toggleClass("open");
+  });
+});
