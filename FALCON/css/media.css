@@ -1,0 +1,65 @@
+@media all and (max-width:1024px){
+.site-wrap{display:none}
+.header_bottom_2{display:none!important}
+.mobile_menu{display:block}
+.header_top_mobile{display:flex;justify-content:center;height:95px;border-bottom:1px solid rgba(245,245,245,.2);margin-top:25px}
+.overlay_mobile{background-color:rgba(0,0,0,.7);height:100%;position:fixed;width:100%;z-index:4}
+main{height:72vh}
+.flex-container{height:35vh}
+footer{justify-content:center}
+.container{padding:0 30px}
+.services_row{justify-content:center}
+.services_cart{margin-bottom:35px}
+.we_best_block{flex-wrap:wrap;justify-content:center}
+.we_best_cart{margin:20px 0}
+.jobs{flex-wrap:wrap;justify-content:center;height:65vh}
+.jobs_text_in>span:nth-child(3){text-align:center}
+.contacts{flex-wrap:wrap;justify-content:center;text-align:center}
+.form_bot{display:flex;flex-direction:column;justify-content:center;align-items:center}
+.contacts_block{margin-left:0}
+.header_top_fontawsome {color: white}
+.menu-list ul li a span {color: white}
+}
+@media all and (max-width:768px){
+.about_us_block{height:30vh}
+.about_us_btn{left:-100px;width:130%;height:15vh;box-shadow:0 -40px 40px -11px #004360}
+#about_us_btn{bottom:30px}
+.services_block span{text-align:center}
+.flex-title{font-size:5vw}
+}
+@media all and (max-width:720px){
+.main_h1{font-size:40px}
+.main_h2{font-size:20px}
+}
+@media all and (max-width:600px){
+.top_logo_size{width:200px;position:relative;left:80px}
+}
+@media all and (max-width:414px){
+main{height:93vh}
+.about_us_block{height:70vh}
+.about_us_btn{left:0;width:auto}
+.jobs_text_in h3{text-align:center}
+.text_caption h3{text-align:center}
+.contacts_block{margin-left:0}
+.jobs{height:98vh}
+footer div:nth-child(1){text-align:center;font-size:x-small}
+.footer_menu{flex-wrap:wrap;justify-content:center}
+.modal{top:55%;max-width:266px}
+.flex-container{height:40vh}
+}
+@media all and (max-width:375px){
+main{height:80vh}
+.jobs{height:115vh}
+.modal{top:55%;max-width:266px}
+}
+@media all and (max-width:375px){
+.top_logo_size{left:50px}
+.main_h1{font-size:35px}
+.about_us_block{height:75vh}
+.services_block h3{text-align:center}
+.modal{top:55%;max-width:266px}
+}
+
+.mobile_menu_contacts ul li{
+    padding-left: 0;
+}

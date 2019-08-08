@@ -16,408 +16,512 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- media -->
-   
+    <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
     <div class="wrapper">
-    <!-- mobile menu -->
-    <div class="mobile_menu">
+        <!-- preloader -->
+        <div class="spinner">
+            <p>
+                <div class="cube1"></div>
+                <div class="cube2"></div>
+                <span class="loading">Loading...</span>
+            </p>
+        </div>
+        <!-- end preloader -->
+        <!-- mobile menu + bg layer -->
+        <div class="mobile_menu">
             <div class="mobile_menu_in">
-                <div id="burger" class="menu-btn hamburger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <span><i class="fas fa-caret-left"></i></span>
+                <div class="overlay_menu-btn">
+                    <div id="burger" class="menu-btn hamburger">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <span><i class="fas fa-caret-left"></i></span>
+                    </div>
                 </div>
                 <div class="menu-list">
+                    <div class="mobile_menu_contacts">
+                        <ul>
+                            <li>
+                                <a href="#" class="menu-link">
+                                    <div class="header_top_fontawsome">
+                                        <i class="far fa-clock"></i>
+                                    </div>
+                                    <div class="header_top_info">
+                                        <span>
+                                            Мы работает
+                                        </span>
+                                        <span>
+                                            Без выходных!
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="menu-link">
+                                    <div class="header_top_fontawsome">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="header_top_info">
+                                        <span>
+                                            Информация
+                                        </span>
+                                        <span>
+                                            +375 &#40;00&#41; 000 00 00&#59;
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>
+                             <li>
+                                <a href="#" class="menu-link">
+                                    <div class="header_top_fontawsome">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="header_top_info">
+                                        <span>
+                                            Email
+                                        </span>
+                                        <span>
+                                            falconspedition<br>
+                                            @gmail.com
+                                        </span>
+                                    </div>
+                                </a>
+                            </li>       
+                        </ul>
+                    </div>
                     <ul>
-                        <li>
-                            <img src="img/1.png" alt=""><span>ToDo</span>
-                        </li>
-                        <li>
-                            <a href="index.html">
-                                <span><i class="fas fa-home"></i></span> Ноme
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pages/settings.html">
-                                <span><i class="fas fa-cog"></i></span> Settings
-                            </a>
-                        </li>
+                        <li><a href="#" class="menu-link">Главная</a></li>
+                        <li><a href="#about" class="menu-link">О компании</a></li>
+                        <li><a href="#services" class="menu-link">Услуги</a></li>
+                        <li><a href="#jobs" class="menu-link">Вакансии</a></li>
+                        <li><a href="#contacts" class="menu-link">Контакты</a></li>
                     </ul>
                 </div>
             </div>
-    </div>
-         <!-- end mobile menu -->
-    <div class="header_bottom_2" id="header">
-        <div>
-            <ul>
-                <li><img src="img/logo.png" alt="logo" title="logo" class="header_bottom_2_logo"></li>
-                <li><a href="#" class="menu-link">Главная</a></li>
-                <li><a href="#about" class="menu-link">О компании</a></li>
-                <li><a href="#services" class="menu-link">Услуги</a></li>
-                <li><a href="#" class="menu-link">Вакансии</a></li>
-                <li><a href="#" class="menu-link">Контакты</a></li>
-            </ul>
         </div>
-    </div>
-    <main class="wow fadeIn" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="site-wrap">
-                <header>
-                    <div class="header_top">
-                        <div class="logo">
-                            <img src="img/logo.png" alt="logo" title="logo" class="top_logo_size wow zoomInDown">
-                        </div>
-                        <div class="menu">
-                            <ul>
-                                <li>
-                                    <a href="#" class="menu-link">
-                                        <div class="header_top_fontawsome">
-                                            <i class="far fa-clock"></i>
-                                        </div>
-                                        <div class="header_top_info">
-                                            <span>
-                                                Мы работает
-                                            </span>
-                                            <span>
-                                                Без выходных!
-                                            </span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="menu-link">
-                                        <div class="header_top_fontawsome">
-                                            <i class="fas fa-phone-alt"></i>
-                                        </div>
-                                        <div class="header_top_info">
-                                            <span>
-                                                Информация
-                                            </span>
-                                            <span>
-                                                +375 &#40;00&#41; 000 00 00&#59;
-                                            </span>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#" class="menu-link">
-                                        <div class="header_top_fontawsome">
-                                            <i class="fas fa-envelope"></i>
-                                        </div>
-                                        <div class="header_top_info">
-                                            <span>
-                                                Email
-                                            </span>
-                                            <span>
-                                                falconspedition@gmail.com
-                                            </span>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="header_bottom">
-                        <nav>
-                            <ul>
-                                <li><a href="#" class="menu-link">Главная</a></li>
-                                <li><a href="#about" class="menu-link">О компании</a></li>
-                                <li><a href="#services" class="menu-link">Услуги</a></li>
-                                <li><a href="#" class="menu-link">Вакансии</a></li>
-                                <li><a href="#" class="menu-link">Контакты</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </header>
+        <div id="bg_layer"></div>
+        <!-- end mobile menu + bg laye -->
+        <!-- выезжающий хэдер -->
+        <div class="header_bottom_2" id="header">
+            <div>
+                <ul>
+                    <li><img src="img/logo.png" alt="logo" title="logo" class="header_bottom_2_logo"></li>
+                    <li><a href="#" class="menu-link">Главная</a></li>
+                    <li><a href="#about" class="menu-link">О компании</a></li>
+                    <li><a href="#services" class="menu-link">Услуги</a></li>
+                    <li><a href="#jobs" class="menu-link">Вакансии</a></li>
+                    <li><a href="#contacts" class="menu-link">Контакты</a></li>
+                </ul>
             </div>
-            <div class="header_top_mobile">
-                <div class="logo">
-                    <img src="img/logo.png" alt="logo" title="logo" class="top_logo_size wow zoomInDown">
-                </div>   
-            </div>
-            <div class="main_bottom">
-                <div>
-                    <h1 class="main_h1 wow fadeInUp" data-wow-delay="0.5s">
-                        Международные перевозки
-                    </h1>
+        </div>
+        <!-- выезжающий хэдер -->
+        <main>
+            <div class="container">
+                <div class="site-wrap">
+                    <header>
+                        <div class="header_top">
+                            <div class="logo">
+                                <img src="img/logo.png" alt="logo" title="logo" class="top_logo_size wow zoomInDown">
+                            </div>
+                            <div class="menu">
+                                <ul>
+                                    <li>
+                                        <a href="#" class="menu-link">
+                                            <div class="header_top_fontawsome">
+                                                <i class="far fa-clock"></i>
+                                            </div>
+                                            <div class="header_top_info">
+                                                <span>
+                                                    Мы работает
+                                                </span>
+                                                <span>
+                                                    Без выходных!
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="menu-link">
+                                            <div class="header_top_fontawsome">
+                                                <i class="fas fa-phone-alt"></i>
+                                            </div>
+                                            <div class="header_top_info">
+                                                <span>
+                                                    Информация
+                                                </span>
+                                                <span>
+                                                    +375 &#40;00&#41; 000 00 00&#59;
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="menu-link">
+                                            <div class="header_top_fontawsome">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <div class="header_top_info">
+                                                <span>
+                                                    Email
+                                                </span>
+                                                <span>
+                                                    falconspedition@gmail.com
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header_bottom">
+                            <nav>
+                                <ul>
+                                    <li><a href="#" class="menu-link">Главная</a></li>
+                                    <li><a href="#about" class="menu-link">О компании</a></li>
+                                    <li><a href="#services" class="menu-link">Услуги</a></li>
+                                    <li><a href="#jobs" class="menu-link">Вакансии</a></li>
+                                    <li><a href="#contacts" class="menu-link">Контакты</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </header>
                 </div>
-                <div>
-                    <h2 class="main_h2 wow fadeInUp" data-wow-delay="1s">Оказание полного спектра логистических и таможенных услуг на территории
-                    России, Республики Беларусь и странах ЕС.</h2>
+                <div class="header_top_mobile">
+                    <div class="logo">
+                        <img src="img/logo.png" alt="logo" title="logo" class="top_logo_size wow zoomInDown">
+                    </div>
                 </div>
-                <!-- Модальное окно и кнопка -->
-                <button class="main_button wow flipInX js-open-modal" data-modal="1" data-wow-delay="1.5s">
-                    Свяжитесь с нами
-                </button>
-                
-                <div class="modal" data-modal="1">
+                <div class="main_bottom">
+                    <div>
+                        <h1 class="main_h1 wow fadeInUp" data-wow-delay="0.5s">
+                            Международные перевозки
+                        </h1>
+                    </div>
+                    <div>
+                        <h2 class="main_h2 wow fadeInUp" data-wow-delay="1s">Оказание полного спектра логистических и
+                            таможенных услуг на территории
+                            России, Республики Беларусь и странах ЕС.</h2>
+                    </div>
+                    <!-- Модальное окно и кнопка -->
+                    <button class="main_button wow flipInX js-open-modal" data-modal="1" data-wow-delay="1.5s">
+                        Свяжитесь с нами
+                    </button>
+
+                    <div class="modal" data-modal="1">
                         <!--   Svg иконка для закрытия окна  -->
                         <div class="modal__cross js-modal-close"><i class="far fa-times-circle"></i></div>
                         <p class="modal__title">Срочный вопрос?</p>
                         <p>Вы можете оставить заявку и наши специалисты ответят Вам в течении 30 минут.</p>
                         <form class="modal_form" action="php/send.php" method="post">
-                            <input type="text" class="modal_form_margin_bottom modal_input" name="first_name" placeholder="Ф.И.О / Название организации" required>
-                            <input type="email" class="modal_form_margin_bottom modal_input" name="email" placeholder="E-mail" required>
-                            <textarea name="" id="" cols="30" rows="10" class="modal_form_margin_bottom modal_textaria" name="message" placeholder="Запрос" required></textarea>
-                            <input type="submit" name="submit" class="modal_form_margin_bottom modal_button"  value="Отправить">
+                            <input type="text" class="modal_form_margin_bottom modal_input" name="first_name"
+                                placeholder="Ф.И.О / Название организации" required>
+                            <input type="email" class="modal_form_margin_bottom modal_input" name="email"
+                                placeholder="E-mail" required>
+                            <textarea name="" id="" cols="30" rows="10" class="modal_form_margin_bottom modal_textaria"
+                                name="message" placeholder="Запрос" required></textarea>
+                            <input type="submit" name="submit" class="modal_form_margin_bottom modal_button"
+                                value="Отправить">
                         </form>
+                    </div>
+                    <!-- Подложка под модальным окном -->
+                    <div class="overlay js-overlay-modal"></div>
+                    <!-- Конец модального окна   -->
                 </div>
-                <!-- Подложка под модальным окном -->
-                <div class="overlay js-overlay-modal"></div>  
-                <!-- Конец модального окна   -->
             </div>
+        </main>
+        <div class="container" id="padding0">
+                <div class="about_us_block">
+                    <h2 class="wow bounceInRight" data-wow-offset="100">О нас</h2>
+                    <span class="wow bounceInLeft" data-wow-offset="100">Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Facilis, quidem. Voluptatibus nobis asperiores eos, minima harum quis mollitia
+                        repellendus? Soluta aut, ducimus sequi autem recusandae maiores ea iste corrupti temporibus.
+                        Neque totam consequuntur officiis sint tempora laborum, suscipit, velit repellendus
+                        necessitatibus eos deserunt placeat quibusdam impedit nesciunt sit quidem non voluptas natus
+                        maiores. Dolores ipsa aliquid non, architecto explicabo quam!
+                        Veritatis accusamus vitae ducimus vero ratione eligendi accusantium quasi autem. Ullam quae
+                        minus a! Omnis fugiat veritatis doloremque odit inventore atque ipsam, cum quo maiores modi
+                        quae, laborum nulla facere?.</span>
+                </div>
+                <div class="flex-container">
+                    <div class="flex-slide home">
+                        <div class="flex-title flex-title-home">Автомобильные перевозки</div>
+                        <div class="flex-about flex-about-home">
+                            <p>Click here to navigate to the home section of the website</p>
+                        </div>
+                    </div>
+                    <div class="flex-slide about">
+                        <div class="flex-title">Железнодорожные перевозки</div>
+                        <div class="flex-about">
+                            <p>Click here to navigate to the About section of the website</p>
+                        </div>
+                    </div>
+                    <div class="flex-slide work">
+                        <div class="flex-title">Авиа перевозки</div>
+                        <div class="flex-about">
+                            <p>Click here to navigate to the About section of the website</p>
+                        </div>
+                    </div>
+                    <div class="flex-slide contact">
+                        <div class="flex-title">Другие услуги</div>
+                        <div class="flex-about">
+                            <p>Click here to navigate to the About section of the website</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about_us_btn">
+                    <a href="#services"><button class="main_button wow fadeInDown" id="about_us_btn"
+                            data-wow-offset="100" href="#services">
+                            Подробнее
+                        </button></a>
+                </div>
         </div>
-    </main>
-    
-    <div class="container">
-        <div class="about_us_block">
-            <h2 class="wow bounceInRight" data-wow-offset="100">О нас</h2>
-            <span class="wow bounceInLeft" data-wow-offset="100">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, quidem. Voluptatibus nobis asperiores eos, minima harum quis mollitia repellendus? Soluta aut, ducimus sequi autem recusandae maiores ea iste corrupti temporibus.
-            Neque totam consequuntur officiis sint tempora laborum, suscipit, velit repellendus necessitatibus eos deserunt placeat quibusdam impedit nesciunt sit quidem non voluptas natus maiores. Dolores ipsa aliquid non, architecto explicabo quam!
-            Veritatis accusamus vitae ducimus vero ratione eligendi accusantium quasi autem. Ullam quae minus a! Omnis fugiat veritatis doloremque odit inventore atque ipsam, cum quo maiores modi quae, laborum nulla facere?.</span>
-        </div>
-            <div class="flex-container">
-                <div class="spinner"><p>
-                    <div class="cube1"></div>
-                    <div class="cube2"></div>
-                    <span class="loading">Loading...</span>
-                    </p>
-                </div>
-                <div class="flex-slide home">
-                    <div class="flex-title flex-title-home">Автомобильные перевозки</div>
-                    <div class="flex-about flex-about-home"><p>Click here to navigate to the home section of the website</p></div>
-                </div>
-                <div class="flex-slide about">
-                    <div class="flex-title">Железнодорожные перевозки</div>
-                    <div class="flex-about"><p>Click here to navigate to the About section of the website</p></div>
-                </div>
-                <div class="flex-slide work">
-                    <div class="flex-title">Авиа перевозки</div>
-                    <div class="flex-about"><p>Click here to navigate to the About section of the website</p></div>
-                </div>
-                <div class="flex-slide contact">
-                    <div class="flex-title">Другие услуги</div>
-                    <div class="flex-about"><p>Click here to navigate to the About section of the website</p></div>
-                </div>
-            </div>
-        <div class="about_us_btn">
-            <a href="#services"><button class="main_button wow fadeInDown" id="about_us_btn" data-wow-offset="100" href="#services">
-                Подробнее
-            </button></a>
-        </div> 
-    </div>
-    <div class="flex_box_bg">
-        <div class="container" id="about">
-            <div class="text_caption">
-                <h3 class="wow bounceInRight">О КОМПАНИИ</h3>
-                <div class="white_line wow fadeIn">
-                </div>
-                <span class="wow bounceInLeft">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus similique ratione quos eaque tempore incidunt doloribus explicabo laudantium, qui fugiat, eos soluta, non labore officia temporibus porro consequuntur veritatis vitae!
-                    Obcaecati magni quasi beatae deleniti, 
-                </span>
-                <span class="wow bounceInRight">
-                    laboriosam dignissimos nostrum incidunt officiis dolorem voluptate nisi hic, ullam, exercitationem suscipit! Quam possimus dolores fuga modi aliquam adipisci rerum doloremque sunt nam, nostrum culpa.
-                    Ut fuga perferendis veritatis vero ipsum molestiae itaque voluptatum ducimus cupiditate? Ducimus amet culpa odit ex, tenetur omnis neque, eos ipsum, perferendis quos reprehenderit eligendi id laudantium. Vero, ipsam! Vero.
-                    Nisi, labore minus incidunt repellendus cumque quas mollitia nam sint iure quam praesentium dicta! Ex laborum distinctio, architecto quasi voluptates vero enim eum esse voluptatem? Aspernatur quo quas at minus!
-                    Velit earum enim eius blanditiis in et voluptate ex quos sed iusto accusamus repudiandae natus non odit sapiente, provident minus! Debitis fugit itaque vero odio dolorum possimus quo esse praesentium.
-                </span>
-            </div>
-        </div>
-    </div>  
-    <div class="parallax-window" data-parallax="scroll" data-image-src="img/svg/Shipyard.svg"></div>
-    <div class="flex_box_bg">
-        <div class="container" id="services">
-            <div class="services_block wow zoomInDown">
-                <h3>НАШИ УСЛУГИ</h3>
-                <div class="white_line"></div>
-                <span>
-                    Мы предоставляем полный спектр логистических услуг
-                </span>
-            </div>
-            <div class="services_column wow fadeIn">
-                <div class="services_row">
-                    <div class="services_cart">
-                        <div><i class="fas fa-truck"></i></div>
-                        <div>Автомобильные перевозки</div>
-                        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus minus qui modi repudiandae labore quod reprehenderit ullam debitis, corrupti excepturi praesentium deserunt possimus delectus temporibus ad velit ratione harum distinctio!</div>
+        <div class="flex_box_bg" id="about">
+            <div class="container" >
+                <div class="text_caption">
+                    <h3 class="wow bounceInRight">О КОМПАНИИ</h3>
+                    <div class="white_line wow fadeIn">
                     </div>
-                    <div class="services_cart">
-                        <div><i class="fas fa-train"></i></div>
-                        <div>Железнодорожные перевозки</div>
-                        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus minus qui modi repudiandae labore quod reprehenderit ullam debitis, corrupti excepturi praesentium deserunt possimus delectus temporibus ad velit ratione harum distinctio!</div>
-                    </div>
-                    <div class="services_cart">
-                        <div><i class="fas fa-plane"></i></div>
-                        <div>Авиа перевозки</div>
-                        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus minus qui modi repudiandae labore quod reprehenderit ullam debitis, corrupti excepturi praesentium deserunt possimus delectus temporibus ad velit ratione harum distinctio!</div>
-                    </div>
-                </div>
-                <div class="services_row">
-                    <div class="services_cart">
-                        <div><i class="fas fa-warehouse"></i></div>
-                        <div>Складские услуги</div>
-                        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus minus qui modi repudiandae labore quod reprehenderit ullam debitis, corrupti excepturi praesentium deserunt possimus delectus temporibus ad velit ratione harum distinctio!</div>
-                    </div>
-                    <div class="services_cart">
-                        <div><i class="fas fa-passport"></i></div>
-                        <div>Услуги тамженного представителя</div>
-                        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus minus qui modi repudiandae labore quod reprehenderit ullam debitis, corrupti excepturi praesentium deserunt possimus delectus temporibus ad velit ratione harum distinctio!</div>
-                    </div>
-                    <div class="services_cart">
-                        <div><i class="fas fa-luggage-cart"></i></div>
-                        <div>Перегон техники</div>
-                        <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus minus qui modi repudiandae labore quod reprehenderit ullam debitis, corrupti excepturi praesentium deserunt possimus delectus temporibus ad velit ratione harum distinctio!</div>
-                    </div>
+                    <span class="wow bounceInLeft">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus similique ratione quos eaque
+                        tempore incidunt doloribus explicabo laudantium, qui fugiat, eos soluta, non labore officia
+                        temporibus porro consequuntur veritatis vitae!
+                        Obcaecati magni quasi beatae deleniti,
+                    </span>
+                    <span class="wow bounceInRight">
+                        laboriosam dignissimos nostrum incidunt officiis dolorem voluptate nisi hic, ullam,
+                        exercitationem suscipit! Quam possimus dolores fuga modi aliquam adipisci rerum doloremque sunt
+                        nam, nostrum culpa.
+                        Ut fuga perferendis veritatis vero ipsum molestiae itaque voluptatum ducimus cupiditate? Ducimus
+                        amet culpa odit ex, tenetur omnis neque, eos ipsum, perferendis quos reprehenderit eligendi id
+                        laudantium. Vero, ipsam! Vero.
+                        Nisi, labore minus incidunt repellendus cumque quas mollitia nam sint iure quam praesentium
+                        dicta! Ex laborum distinctio, architecto quasi voluptates vero enim eum esse voluptatem?
+                        Aspernatur quo quas at minus!
+                        Velit earum enim eius blanditiis in et voluptate ex quos sed iusto accusamus repudiandae natus
+                        non odit sapiente, provident minus! Debitis fugit itaque vero odio dolorum possimus quo esse
+                        praesentium.
+                    </span>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="flex_box_bg">
-        <div class="container">
-            <div class="text_caption">
-                <h3 class="wow bounceInRight">ПОЧЕМУ МЫ ЛУЧШЕ</h3>
-                <div class="white_line wow fadeIn">
+        <div class="parallax-window" data-parallax="scroll" data-image-src="img/svg/Shipyard.svg"></div>
+        <div class="flex_box_bg" id="services">
+            <div class="container">
+                <div class="services_block wow zoomInDown">
+                    <h3>НАШИ УСЛУГИ</h3>
+                    <div class="white_line"></div>
+                    <span>
+                        Мы предоставляем полный спектр логистических услуг
+                    </span>
                 </div>
-                <span class="wow bounceInLeft">
-                    Забота о клиентах – главная причина нашего успеха!
-                </span>
-            </div>
-            <div class="we_best_block wow fadeIn">
-                <div class="we_best_img">
-                    <img src="img/boat.jpg" alt="">
-                    <img src="img/truck.JPG" alt="">
-                </div>
-                <div class="we_best_info">
-                    <div class="we_best_cart">
-                        <div class="we_best_fontawsome">
-                            <i class="fas fa-dolly fontawsome"></i>
+                <div class="services_column wow fadeIn">
+                    <div class="services_row">
+                        <div class="services_cart">
+                            <div><i class="fas fa-truck"></i></div>
+                            <div>Автомобильные перевозки</div>
+                            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus minus qui modi
+                                repudiandae labore quod reprehenderit ullam debitis, corrupti excepturi praesentium
+                                deserunt possimus delectus temporibus ad velit ratione harum distinctio!</div>
                         </div>
-                        <div>
-                            <h4>Гарантия и безопасность груза</h4>
-                            <span>Все грузы застрахованы обязательным страхованием CMR, имеются сертификаты качества и документы TIR Carnet, которые упрощают перевозку грузов в страны СНГ.</span>
+                        <div class="services_cart">
+                            <div><i class="fas fa-train"></i></div>
+                            <div>Железнодорожные перевозки</div>
+                            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus minus qui modi
+                                repudiandae labore quod reprehenderit ullam debitis, corrupti excepturi praesentium
+                                deserunt possimus delectus temporibus ad velit ratione harum distinctio!</div>
                         </div>
-                    </div>
-                    <div class="we_best_cart">
-                        <div class="we_best_fontawsome">
-                            <i class="far fa-credit-card fontawsome"></i>
-                        </div>
-                        <div>
-                            <h4>Лучшие цены</h4>
-                            <span>В связи с тем, что мы имеем много партнёров, мы можем предоставить вам лучшие цены на наши услуги</span>
+                        <div class="services_cart">
+                            <div><i class="fas fa-plane"></i></div>
+                            <div>Авиа перевозки</div>
+                            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus minus qui modi
+                                repudiandae labore quod reprehenderit ullam debitis, corrupti excepturi praesentium
+                                deserunt possimus delectus temporibus ad velit ratione harum distinctio!</div>
                         </div>
                     </div>
-                    <div class="we_best_cart">
-                        <div class="we_best_fontawsome">
-                            <i class="fas fa-globe fontawsome"></i>
+                    <div class="services_row">
+                        <div class="services_cart">
+                            <div><i class="fas fa-warehouse"></i></div>
+                            <div>Складские услуги</div>
+                            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus minus qui modi
+                                repudiandae labore quod reprehenderit ullam debitis, corrupti excepturi praesentium
+                                deserunt possimus delectus temporibus ad velit ratione harum distinctio!</div>
                         </div>
-                        <div>
-                            <h4>Оптимизация транспортировки</h4>
-                            <span>Oказываемые нами услуги оценило большинство предприятий, которые выбрали нас своим долгосрочным партнёром по логистике.</span>
+                        <div class="services_cart">
+                            <div><i class="fas fa-passport"></i></div>
+                            <div>Услуги тамженного представителя</div>
+                            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus minus qui modi
+                                repudiandae labore quod reprehenderit ullam debitis, corrupti excepturi praesentium
+                                deserunt possimus delectus temporibus ad velit ratione harum distinctio!</div>
                         </div>
-                    </div>
-                    <div class="we_best_cart">
-                        <div class="we_best_fontawsome">
-                            <i class="fas fa-hourglass-half fontawsome"></i>
-                        </div>
-                        <div>
-                            <h4>Многолетний опыт</h4>
-                            <span>Благодаря опыту, сегодня мы можем гарантировать стабильное и качественное предоставление услуг по грузоперевозкам и качественное обслуживание.</span>
+                        <div class="services_cart">
+                            <div><i class="fas fa-luggage-cart"></i></div>
+                            <div>Перегон техники</div>
+                            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus minus qui modi
+                                repudiandae labore quod reprehenderit ullam debitis, corrupti excepturi praesentium
+                                deserunt possimus delectus temporibus ad velit ratione harum distinctio!</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="flex_box_bg">
-        <div class="container">
-            <div class="jobs">
-                <div class="jobs_text">
-                    <div class="jobs_text_in">
-                        <h3 class="wow bounceInRight">НАШИ ВАКАНСИИ</h3>
-                        <div class="white_line wow fadeIn">
+        <div class="flex_box_bg">
+            <div class="container">
+                <div class="text_caption">
+                    <h3 class="wow bounceInRight">ПОЧЕМУ МЫ ЛУЧШЕ</h3>
+                    <div class="white_line wow fadeIn">
+                    </div>
+                    <span class="wow bounceInLeft">
+                        Забота о клиентах – главная причина нашего успеха!
+                    </span>
+                </div>
+                <div class="we_best_block wow fadeIn">
+                    <div class="we_best_img">
+                        <img src="img/boat.jpg" alt="">
+                        <img src="img/truck.JPG" alt="">
+                    </div>
+                    <div class="we_best_info">
+                        <div class="we_best_cart">
+                            <div class="we_best_fontawsome">
+                                <i class="fas fa-dolly fontawsome"></i>
+                            </div>
+                            <div>
+                                <h4>Гарантия и безопасность груза</h4>
+                                <span>Все грузы застрахованы обязательным страхованием CMR, имеются сертификаты качества
+                                    и документы TIR Carnet, которые упрощают перевозку грузов в страны СНГ.</span>
+                            </div>
                         </div>
-                        <span class="wow bounceInLeft">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates soluta eaque praesentium illum, labore sapiente, fugiat totam aliquid veniam voluptas illo necessitatibus consequuntur omnis amet ducimus beatae aliquam quidem tenetur?
-                        </span>
+                        <div class="we_best_cart">
+                            <div class="we_best_fontawsome">
+                                <i class="far fa-credit-card fontawsome"></i>
+                            </div>
+                            <div>
+                                <h4>Лучшие цены</h4>
+                                <span>В связи с тем, что мы имеем много партнёров, мы можем предоставить вам лучшие цены
+                                    на наши услуги</span>
+                            </div>
+                        </div>
+                        <div class="we_best_cart">
+                            <div class="we_best_fontawsome">
+                                <i class="fas fa-globe fontawsome"></i>
+                            </div>
+                            <div>
+                                <h4>Оптимизация транспортировки</h4>
+                                <span>Oказываемые нами услуги оценило большинство предприятий, которые выбрали нас своим
+                                    долгосрочным партнёром по логистике.</span>
+                            </div>
+                        </div>
+                        <div class="we_best_cart">
+                            <div class="we_best_fontawsome">
+                                <i class="fas fa-hourglass-half fontawsome"></i>
+                            </div>
+                            <div>
+                                <h4>Многолетний опыт</h4>
+                                <span>Благодаря опыту, сегодня мы можем гарантировать стабильное и качественное
+                                    предоставление услуг по грузоперевозкам и качественное обслуживание.</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="jobs_img wow fadeIn">
-                    <img src="img/svg/Jobs.svg" alt="">
+            </div>
+        </div>
+        <div class="flex_box_bg" id="jobs">
+            <div class="container">
+                <div class="jobs">
+                    <div class="jobs_text">
+                        <div class="jobs_text_in">
+                            <h3 class="wow bounceInRight">НАШИ ВАКАНСИИ</h3>
+                            <div class="white_line wow fadeIn">
+                            </div>
+                            <span class="wow bounceInLeft">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates soluta eaque
+                                praesentium illum, labore sapiente, fugiat totam aliquid veniam voluptas illo
+                                necessitatibus consequuntur omnis amet ducimus beatae aliquam quidem tenetur?
+                            </span>
+                        </div>
+                    </div>
+                    <div class="jobs_img wow fadeIn">
+                        <img src="img/svg/Jobs.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-<div class="flex_box_bg">
-    <div class="container">
-        <div class="contacts">
-            <div class="form_bot">
-                <p class="modal__title2">Срочный вопрос?</p>
-                <div class="white_line">
+        <div class="flex_box_bg" id="contacts">
+            <div class="container">
+                <div class="contacts">
+                    <div class="form_bot">
+                        <p class="modal__title2">Срочный вопрос?</p>
+                        <div class="white_line">
+                        </div>
+                        <p>Вы можете оставить заявку и наши специалисты ответят Вам в течении 30 минут.</p>
+                        <form class="form_bottom" action="php/send.php" method="post">
+                            <input type="text" class="modal_form_margin_bottom form_bottom_input" name="first_name"
+                                placeholder="Ф.И.О / Название организации" required>
+                            <input type="email" class="modal_form_margin_bottom form_bottom_input" name="email"
+                                placeholder="E-mail" required>
+                            <textarea id="" cols="30" rows="10" class="modal_form_margin_bottom form_bottom_textaria"
+                                name="message" placeholder="Запрос" required></textarea>
+                            <input type="submit" name="submit" class="modal_form_margin_bottom modal_button"
+                                value="Отправить">
+                        </form>
+                    </div>
+                    <div class="contacts_block">
+                        <p class="modal__title2">НАШ ОФИС</p>
+                        <div class="blue_line">
+                        </div>
+                        <address class="contacts_block_in">
+                            <div>АДРЕС:</div>
+                            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                            <div>Nobis, quo eos </div>
+                            <div>ТЕЛЕФОН</div>
+                            <div>+375 (00) 00 00 00</div>
+                            <div>+375 (00) 00 00 00 WhatsApp/ Viber</div>
+                            <div>ЭЛЕКТРОННАЯ ПОЧТА</div>
+                            <div>info@falcon.com</div>
+                        </address>
+                    </div>
                 </div>
-                <p>Вы можете оставить заявку и наши специалисты ответят Вам в течении 30 минут.</p>
-                <form class="form_bottom" action="php/send.php" method="post">
-                    <input type="text" class="modal_form_margin_bottom form_bottom_input" name="first_name" placeholder="Ф.И.О / Название организации" required>
-                    <input type="email" class="modal_form_margin_bottom form_bottom_input" name="email" placeholder="E-mail" required>
-                    <textarea id="" cols="30" rows="10" class="modal_form_margin_bottom form_bottom_textaria" name="message" placeholder="Запрос" required></textarea>
-                    <input type="submit" name="submit" class="modal_form_margin_bottom modal_button"  value="Отправить">
-                </form>
             </div>
-            <div class="contacts_block">
-                <p class="modal__title2">НАШ ОФИС</p>
-                <div class="blue_line">
-                </div>
-                <address class="contacts_block_in">
-                    <div>АДРЕС:</div>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                    <div>Nobis, quo eos </div>
-                    <div>ТЕЛЕФОН</div>
-                    <div>+375 (00) 00 00 00</div>
-                    <div>+375 (00) 00 00 00 WhatsApp/ Viber</div>
-                    <div>ЭЛЕКТРОННАЯ ПОЧТА</div>
-                    <div>info@falcon.com</div>
-                </address>
+        </div>
+        <script type="text/javascript" charset="utf-8" async
+            src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Affb3fa1f128935a92fa9b5d7ca21b282cf7fb46605926b72793107b10a12bdfe&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false"
+            class="ymaps-layers-pane"></script>
+        <div class="flex_box_bg">
+            <div class="container">
+                <footer>
+                    <div>
+                        &#169; Falcon Spedition 2019. falconspedition@gmail.com. All Rights Reserved
+                    </div>
+                    <div>
+                        <ul class="footer_menu">
+                            <li><a href="#" class="menu-link">Главная</a></li>
+                            <li><a href="#about" class="menu-link">О компании</a></li>
+                            <li><a href="#services" class="menu-link">Услуги</a></li>
+                            <li><a href="#" class="menu-link">Вакансии</a></li>
+                            <li><a href="#" class="menu-link">Контакты</a></li>
+                        </ul>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>
-</div>
-<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Affb3fa1f128935a92fa9b5d7ca21b282cf7fb46605926b72793107b10a12bdfe&amp;width=100%25&amp;height=600&amp;lang=ru_RU&amp;scroll=false" class="ymaps-layers-pane"></script>
-<div class="flex_box_bg">
-    <div class="container">
-        <footer>
-            <div>
-                &#169; Falcon Spedition 2019. falconspedition@gmail.com. All Rights Reserved
-            </div>
-            <div>
-                <ul class="footer_menu">
-                    <li><a href="#" class="menu-link">Главная</a></li>
-                    <li><a href="#about" class="menu-link">О компании</a></li>
-                    <li><a href="#services" class="menu-link">Услуги</a></li>
-                    <li><a href="#" class="menu-link">Вакансии</a></li>
-                    <li><a href="#" class="menu-link">Контакты</a></li>
-                </ul>
-            </div>
-        </footer>
-    </div>
-</div>
-    </div>
-
-<script src="https://kit.fontawesome.com/2bcb40ab28.js"></script>
-<script src="js/wow.js"></script>
-<script>
+    <!-- скрипты -->
+    <script src="https://kit.fontawesome.com/2bcb40ab28.js"></script>
+    <script src="js/wow.js"></script>
+    <script>
         new WOW().init();
-</script>
-<script src="js/jquery-3.4.1.min.js"></script>
-<script src="js/jquery.waitforimages.min.js"></script>
-<script src="js/sweetalert.min.js"></script>
-<script src="js/parallax.min.js"></script>
-<script src="js/index.js"></script>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<4f4c15df-dbdf-430b-944d-bcfc47440043>" type="text/javascript"></script>
-
+    </script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/jquery.waitforimages.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<4f4c15df-dbdf-430b-944d-bcfc47440043>"
+        type="text/javascript"></script>
+    <!-- скрипты(конец) -->
 </body>
 
 </html>
