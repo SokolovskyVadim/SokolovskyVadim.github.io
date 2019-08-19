@@ -4,7 +4,8 @@
 .mobile_menu{display:block}
 .header_top_mobile{display:flex;justify-content:center;height:95px;border-bottom:1px solid rgba(245,245,245,.2);margin-top:25px}
 .overlay_mobile{background-color:rgba(0,0,0,.7);height:100%;position:fixed;width:100%;z-index:4}
-main{height:72vh}
+main{height:55vh}
+.text_caption {margin-top: 0px;}
 .flex-container{height:35vh}
 footer{justify-content:center}
 .container{padding:0 30px}
@@ -19,13 +20,17 @@ footer{justify-content:center}
 .contacts_block{margin-left:0}
 .header_top_fontawsome {color: white}
 .menu-list ul li a span {color: white}
+footer div:nth-child(1){text-align: center}
 }
 @media all and (max-width:768px){
+main{height: 75vh}
 .about_us_block{height:30vh}
 .about_us_btn{left:-100px;width:130%;height:15vh;box-shadow:0 -40px 40px -11px #004360}
 #about_us_btn{bottom:30px}
 .services_block span{text-align:center}
 .flex-title{font-size:5vw}
+.flex-container{height:100vh}
+#ymaps1566200115343755082{height: 300px !important}
 }
 @media all and (max-width:720px){
 .main_h1{font-size:40px}
@@ -37,7 +42,7 @@ footer{justify-content:center}
 @media all and (max-width:414px){
 main{height:93vh}
 .about_us_block{height:70vh}
-.about_us_btn{left:0;width:auto}
+.about_us_btn{left:0;width:auto;height: 20vh}
 .jobs_text_in h3{text-align:center}
 .text_caption h3{text-align:center}
 .contacts_block{margin-left:0}
@@ -45,21 +50,26 @@ main{height:93vh}
 footer div:nth-child(1){text-align:center;font-size:x-small}
 .footer_menu{flex-wrap:wrap;justify-content:center}
 .modal{top:55%;max-width:266px}
-.flex-container{height:40vh}
+.loading {left:45%;top:53%}
+.cube1,.cube2{left:45%}
+.menu-list ul li {height: 70px}
+.menu-list ul li:hover {height:70px}
 }
+
 @media all and (max-width:375px){
-main{height:80vh}
+main{height:100vh}
+.about_us_block {height: 60vh}
 .jobs{height:115vh}
 .modal{top:55%;max-width:266px}
-}
-@media all and (max-width:375px){
 .top_logo_size{left:50px}
 .main_h1{font-size:35px}
-.about_us_block{height:75vh}
 .services_block h3{text-align:center}
 .modal{top:55%;max-width:266px}
+.menu-list ul li a{font-size: 16px}
+.jobs {height: 142vh}
 }
 
 .mobile_menu_contacts ul li{
     padding-left: 0;
 }
+
