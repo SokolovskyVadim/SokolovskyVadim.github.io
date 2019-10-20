@@ -8,11 +8,9 @@ class Game {
         '4': 1200,
     }
 
-    score = 0;
-    lines = 0;
-    playfield = this.createPlayfield();
-    activePiece = this.createPiece();
-    nextPiece = this.createPiece();
+    constructor() {
+        this.reset();
+    }
 
     get level() {
         return Math.floor(this.lines * 0.1);
@@ -43,8 +41,19 @@ class Game {
             level: this.level,
             lines: this.lines,
             nextPiece: this.nextPiece,
-            playfield
+            playfield,
+            isGameOver: this.topOut
         };
+    }
+
+    reset() {
+        this.score = 0;
+        this.lines = 0;
+        this.topOut = false;
+        this.playfield = this.createPlayfield();
+        this.activePiece = this.createPiece();
+        this.nextPiece = this.createPiece();
+
     }
 
     createPlayfield() {
@@ -146,6 +155,8 @@ class Game {
     }
 
     movePieceDown() {
+        if (this.topOut) return;
+
         this.activePiece.y += 1;
 
         if (this.hasCollision()) {
@@ -154,6 +165,10 @@ class Game {
             const clearedLines = this.clearLines();
             this.updateScore(clearedLines);
             this.updatePieces();
+        }
+
+        if (this.hasCollision()) {
+            this.topOut = true;
         }
     }
 
@@ -317,23 +332,23 @@ class View {
         this.renderPanel(state);
     }
 
-    renderStartScreen(){
+    renderStartScreen() {
         this.context.fillStyle = 'white';
         this.context.font = '28px "VT323"';
         this.context.textAlign = 'center';
         this.context.textBaseline = 'middle';
-        this.context.fillText('Press Enter to start', this. width / 2, this.height / 2); 
+        this.context.fillText('Press Enter to start', this.width / 2, this.height / 2); 
     }
 
-    renderPauseScreen(){
+    renderPauseScreen() {
         this.context.fillStyle = 'rgba(0,0,0,0.75)';
-        this.context.fillRect = (0, 0, this.width, this.height)
+        this.context.fillRect(0, 0, this.width, this.height);
 
         this.context.fillStyle = 'white';
         this.context.font = '28px "VT323"';
         this.context.textAlign = 'center';
         this.context.textBaseline = 'middle';
-        this.context.fillText('Press Enter to resume', this. width / 2, this.height / 2); 
+        this.context.fillText('Press Enter to resume', this.width / 2, this.height / 2); 
     }
 
     renderEndScreen({ score }){
@@ -345,6 +360,7 @@ class View {
         this.context.textBaseline = 'middle';
         this.context.fillText('GAME OVER', this. width / 2, this.height / 2 - 48);
         this.context.fillText(`Score: ${score}`, this. width / 2, this.height / 2); 
+        this.context.fillText('Press ENTER to Restart', this. width / 2, this.height / 2 + 48); 
     }
 
     clearScreen() {
@@ -368,7 +384,7 @@ class View {
             }
         }
 
-        this.context.strokeStyle = 'white';
+        this.context.strokeStyle = 'purple';
         this.context.lineWidth = this.playfieldBorderWidth;
         this.context.strokeRect(0, 0, this.playfieldWidth, this.playfieldHeight);
     } 
@@ -421,6 +437,10 @@ class Controller {
         this.isPlaying = false;
 
         document.addEventListener('keydown', this.handleKeyDown.bind(this));
+        document.addEventListener('keyup', this.handleKeyUp.bind(this));
+
+        var startGameMusic=document.getElementById('Start_game_music');
+        this.startGameMusic = startGameMusic;
 
         this.view.renderStartScreen();
     }
@@ -430,27 +450,43 @@ class Controller {
         this.updateView();
     }
 
-    play() {
+    playGame() {
         this.isPlaying = true;
         this.startTimer();
         this.updateView();
+        this.startGameMusic.play();
     }
 
     pause() {
         this.isPlaying = false;
         this.stopTimer();
         this.updateView();
+        this.startGameMusic.pause();
+    }
+
+    reset () {
+        this.game.reset();
+        this.playGame();
     }
 
     updateView(){
-        this.view.renderMainScreen(this.game.getState());
+        const state = this.game.getState();
+
+        if (state.isGameOver) {
+            this.view.renderEndScreen(state);
+        } else if (!this.isPlaying) {
+            this.view.renderPauseScreen();
+        } else
+            this.view.renderMainScreen(state);
     }
 
     startTimer() {
+    const speed = 1000 - this.game.getState().level * 100;
+
         if (!this.intervalId) {
             this.intervalId = setInterval(() => {
                 this.update();
-            }, 1000);
+            }, speed > 0 ? speed : 100);
         }
     }
 
@@ -462,29 +498,42 @@ class Controller {
     }
 
     handleKeyDown(event){
+        const state = this.game.getState();
+
         switch (event.keyCode) {
             case 13: //Enter
-                if  (this.isPlaying) {
+                if(state.isGameOver) {
+                    this.reset();
+                } else if  (this.isPlaying) {
                     this.pause();
                 } else {
-                    this.play();
+                    this.playGame();
                 };
                 break;
             case 37: //left arrow
                 this.game.movePieceLeft();
-                this.view.renderMainScreen(this.game.getState());
+                this.updateView();
                 break;
             case 38: //up arrow
                 this.game.rotatePiece();
-                this.view.renderMainScreen(this.game.getState());
+                this.updateView();
                 break;
             case 39: //right arrow
                 this.game.movePieceRight();
-                this.view.renderMainScreen(this.game.getState());
+                this.updateView();
                 break;
             case 40: //down arrow
+                this.stopTimer();
                 this.game.movePieceDown();
-                this.view.renderMainScreen(this.game.getState());
+                this.updateView();
+                break;
+        }
+    }
+
+    handleKeyUp(event) {
+        switch (event.keyCode) {
+            case 40: //down arrow
+                this.startTimer();
                 break;
         }
     }
