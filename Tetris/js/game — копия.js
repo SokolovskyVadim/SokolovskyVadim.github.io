@@ -8,9 +8,11 @@ class Game {
         '4': 1200,
     }
 
-    constructor() {
-        this.reset();
-    }
+    score = 0;
+    lines = 0;
+    playfield = this.createPlayfield();
+    activePiece = this.createPiece();
+    nextPiece = this.createPiece();
 
     get level() {
         return Math.floor(this.lines * 0.1);
@@ -41,19 +43,8 @@ class Game {
             level: this.level,
             lines: this.lines,
             nextPiece: this.nextPiece,
-            playfield,
-            isGameOver: this.topOut
+            playfield
         };
-    }
-
-    reset() {
-        this.score = 0;
-        this.lines = 0;
-        this.topOut = false;
-        this.playfield = this.createPlayfield();
-        this.activePiece = this.createPiece();
-        this.nextPiece = this.createPiece();
-
     }
 
     createPlayfield() {
@@ -155,8 +146,6 @@ class Game {
     }
 
     movePieceDown() {
-        if (this.topOut) return;
-
         this.activePiece.y += 1;
 
         if (this.hasCollision()) {
@@ -165,10 +154,6 @@ class Game {
             const clearedLines = this.clearLines();
             this.updateScore(clearedLines);
             this.updatePieces();
-        }
-
-        if (this.hasCollision()) {
-            this.topOut = true;
         }
     }
 
@@ -360,7 +345,6 @@ class View {
         this.context.textBaseline = 'middle';
         this.context.fillText('GAME OVER', this. width / 2, this.height / 2 - 48);
         this.context.fillText(`Score: ${score}`, this. width / 2, this.height / 2); 
-        this.context.fillText('Press ENTER to Restart', this. width / 2, this.height / 2 + 48); 
     }
 
     clearScreen() {
@@ -384,7 +368,7 @@ class View {
             }
         }
 
-        this.context.strokeStyle = 'purple';
+        this.context.strokeStyle = 'white';
         this.context.lineWidth = this.playfieldBorderWidth;
         this.context.strokeRect(0, 0, this.playfieldWidth, this.playfieldHeight);
     } 
@@ -437,18 +421,6 @@ class Controller {
         this.isPlaying = false;
 
         document.addEventListener('keydown', this.handleKeyDown.bind(this));
-        document.addEventListener('keyup', this.handleKeyUp.bind(this));
-        document.addEventListener('click', this.mobileButtons.bind(this));
-
-        var startGameMusic = document.getElementById('Start_game_music');
-        this.startGameMusic = startGameMusic;
-
-        var chengePieceSound = document.getElementById('chengePieceSound');
-        this.chengePieceSound = chengePieceSound;
-        
-        var buttonStartGame = document.getElementById('buttonStartGame');
-        this.buttonStartGame = buttonStartGame;
-
 
         this.view.renderStartScreen();
     }
@@ -458,43 +430,30 @@ class Controller {
         this.updateView();
     }
 
-    playGame() {
+    play() {
         this.isPlaying = true;
         this.startTimer();
         this.updateView();
-        this.startGameMusic.play();
     }
 
     pause() {
         this.isPlaying = false;
         this.stopTimer();
         this.updateView();
-        this.startGameMusic.pause();
-    }
-
-    reset () {
-        this.game.reset();
-        this.playGame();
     }
 
     updateView(){
-        const state = this.game.getState();
-
-        if (state.isGameOver) {
-            this.view.renderEndScreen(state);
-        } else if (!this.isPlaying) {
-            this.view.renderPauseScreen();
+        if (!this.isPlaying) {
+            this.view.renderPauseScreen(this.game.getState());
         } else
-            this.view.renderMainScreen(state);
+            this.view.renderMainScreen(this.game.getState());
     }
 
     startTimer() {
-    const speed = 1000 - this.game.getState().level * 100;
-
         if (!this.intervalId) {
             this.intervalId = setInterval(() => {
                 this.update();
-            }, speed > 0 ? speed : 100);
+            }, 1000);
         }
     }
 
@@ -506,54 +465,41 @@ class Controller {
     }
 
     handleKeyDown(event){
-        const state = this.game.getState();
-
         switch (event.keyCode) {
             case 13: //Enter
-                if(state.isGameOver) {
-                    this.reset();
-                } else if  (this.isPlaying) {
+                if  (this.isPlaying) {
                     this.pause();
                 } else {
-                    this.playGame();
+                    this.play();
                 };
                 break;
             case 37: //left arrow
                 this.game.movePieceLeft();
-                this.updateView();
-                this.chengePieceSound.play();
+                this.view.renderMainScreen(this.game.getState());
                 break;
             case 38: //up arrow
                 this.game.rotatePiece();
-                this.updateView();
-                this.chengePieceSound.play();
+                this.view.renderMainScreen(this.game.getState());
                 break;
             case 39: //right arrow
                 this.game.movePieceRight();
-                this.updateView();
-                this.chengePieceSound.play();
+                this.view.renderMainScreen(this.game.getState());
                 break;
             case 40: //down arrow
-                this.stopTimer();
                 this.game.movePieceDown();
-                this.updateView();
-                this.chengePieceSound.play();
+                this.view.renderMainScreen(this.game.getState());
                 break;
         }
     }
 
-    handleKeyUp(event) {
-        switch (event.keyCode) {
-            case 40: //down arrow
-                this.startTimer();
-                break;
-        }
+    handleButtons() {
+        let left = document.getElementById("left");
+            if (left.addEventListener)
+                left.addEventListener("click", this.game.movePieceDown(), false);
+            else if (left.attachEvent)
+                el.attachEvent('onclick', this.game.movePieceDown());
     }
-    mobileButtons(event){
-        this.buttonStartGame = this.playGame();
-    }
-    
-    
+
 }
 
 

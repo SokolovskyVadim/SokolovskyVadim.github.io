@@ -1,8 +1,8 @@
 body {
     margin: 0;
-    background: url('/Tetris/img/back.jpg');
+    background: url('/img/back.jpg');
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     font-family: 'VT323', monospace;
 }
 #root {
@@ -22,6 +22,7 @@ body {
     -moz-box-shadow: 0px 0px 10px 1px purple;
     box-shadow: 0px 0px 10px 1px purple;
 }
+
 .color_red {
     color: red;
     border-radius: 20px;
@@ -57,4 +58,46 @@ body {
     border-radius: 20px;
     background: rgba(128, 0, 128, 0.45);
     box-shadow: 0px 0px 16px 2px purple;
+}
+.buttons {
+    display: none;
+}
+.buttons_button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    margin: 10px;
+    background: rgba(128, 0, 128, 0.5);
+    font-size: 30px;
+    color: chartreuse;
+}
+.buttons_button_2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    margin: 10px;
+    background: rgba(128, 0, 128, 0.5);
+    font-size: 14px;
+    color: chartreuse;
+}
+
+@media screen and (max-width: 768px) {
+    #root {
+        padding: 0;
+    }
+    .buttons {
+        display: block;
+        justify-content: center;
+        width: 100%;
+    }
+    
+}
+@media screen and (max-width: 414px) {
+    #root canvas {
+        margin: 2px;
+    }
+
+     
 }
