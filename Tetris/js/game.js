@@ -440,37 +440,37 @@ class Controller {
         document.addEventListener('keyup', this.handleKeyUp.bind(this));
         // document.addEventListener('click', this.mobilePauseGame.bind(this));
 
-        let startGameMusic = document.getElementById('Start_game_music');
+        var startGameMusic = document.getElementById('Start_game_music');
         this.startGameMusic = startGameMusic;
 
-        let chengePieceSound = document.getElementById('chengePieceSound');
+        var chengePieceSound = document.getElementById('chengePieceSound');
         this.chengePieceSound = chengePieceSound;
         
-        let buttonStartGame = document.getElementById('buttonStartGame');
+        var buttonStartGame = document.getElementById('buttonStartGame');
         this.buttonStartGame = buttonStartGame;
         buttonStartGame.addEventListener('click', this.mobileStartGame.bind(this));
 
-        let buttonPauseGame = document.getElementById('buttonPauseGame');
+        var buttonPauseGame = document.getElementById('buttonPauseGame');
         this.buttonPauseGame = buttonPauseGame;
         buttonPauseGame.addEventListener('click', this.mobilePauseGame.bind(this));
 
-        let buttonResetGame = document.getElementById('buttonResetGame');
+        var buttonResetGame = document.getElementById('buttonResetGame');
         this.buttonResetGame = buttonResetGame;
         buttonResetGame.addEventListener('click', this.mobileResetGame.bind(this));
 
-        let mobileLeft = document.getElementById('mobileLeft');
+        var mobileLeft = document.getElementById('mobileLeft');
         this.mobileLeft = mobileLeft;
         mobileLeft.addEventListener('click', this.mobileLeftGame.bind(this));
 
-        let mobileRight = document.getElementById('mobileRight');
+        var mobileRight = document.getElementById('mobileRight');
         this.mobileRight = mobileRight;
         mobileRight.addEventListener('click', this.mobileRightGame.bind(this));
 
-        let mobileDown = document.getElementById('mobileDown');
+        var mobileDown = document.getElementById('mobileDown');
         this.mobileDown = mobileDown;
         mobileDown.addEventListener('click', this.mobileDownGame.bind(this));
 
-        let mobileChenge = document.getElementById('mobileChenge');
+        var mobileChenge = document.getElementById('mobileChenge');
         this.mobileChenge = mobileChenge;
         mobileChenge.addEventListener('click', this.mobileChengeGame.bind(this));
 
