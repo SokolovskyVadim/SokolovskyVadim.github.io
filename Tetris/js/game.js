@@ -438,16 +438,41 @@ class Controller {
 
         document.addEventListener('keydown', this.handleKeyDown.bind(this));
         document.addEventListener('keyup', this.handleKeyUp.bind(this));
-        document.addEventListener('click', this.mobileButtons.bind(this));
+        // document.addEventListener('click', this.mobilePauseGame.bind(this));
 
-        var startGameMusic = document.getElementById('Start_game_music');
+        let startGameMusic = document.getElementById('Start_game_music');
         this.startGameMusic = startGameMusic;
 
-        var chengePieceSound = document.getElementById('chengePieceSound');
+        let chengePieceSound = document.getElementById('chengePieceSound');
         this.chengePieceSound = chengePieceSound;
         
-        var buttonStartGame = document.getElementById('buttonStartGame');
+        let buttonStartGame = document.getElementById('buttonStartGame');
         this.buttonStartGame = buttonStartGame;
+        buttonStartGame.addEventListener('click', this.mobileStartGame.bind(this));
+
+        let buttonPauseGame = document.getElementById('buttonPauseGame');
+        this.buttonPauseGame = buttonPauseGame;
+        buttonPauseGame.addEventListener('click', this.mobilePauseGame.bind(this));
+
+        let buttonResetGame = document.getElementById('buttonResetGame');
+        this.buttonResetGame = buttonResetGame;
+        buttonResetGame.addEventListener('click', this.mobileResetGame.bind(this));
+
+        let mobileLeft = document.getElementById('mobileLeft');
+        this.mobileLeft = mobileLeft;
+        mobileLeft.addEventListener('click', this.mobileLeftGame.bind(this));
+
+        let mobileRight = document.getElementById('mobileRight');
+        this.mobileRight = mobileRight;
+        mobileRight.addEventListener('click', this.mobileRightGame.bind(this));
+
+        let mobileDown = document.getElementById('mobileDown');
+        this.mobileDown = mobileDown;
+        mobileDown.addEventListener('click', this.mobileDownGame.bind(this));
+
+        let mobileChenge = document.getElementById('mobileChenge');
+        this.mobileChenge = mobileChenge;
+        mobileChenge.addEventListener('click', this.mobileChengeGame.bind(this));
 
 
         this.view.renderStartScreen();
@@ -549,12 +574,49 @@ class Controller {
                 break;
         }
     }
-    mobileButtons(event){
+    
+    mobileStartGame(){
         this.buttonStartGame = this.playGame();
     }
+
+    mobilePauseGame(){
+        this.buttonPauseGame = this.pause();
+    }
+
+    mobileResetGame(){
+        const state = this.game.getState();
+        
+        if(state.isGameOver) {
+            this.reset();
+        }
+    }
+
+    mobileLeftGame(){
+        this.mobileLeft = this.game.movePieceLeft();
+        this.mobileLeft = this.updateView();
+        this.mobileLeft = this.chengePieceSound.play();
+    }
+
+    mobileRightGame(){
+        this.mobileRight = this.game.movePieceRight();
+        this.mobileRight = this.updateView();
+        this.mobileRight = this.chengePieceSound.play();
+    }
+
+    mobileDownGame(){
+        this.mobileDown = this.game.movePieceDown();
+        this.mobileDown = this.updateView();
+        this.mobileDown = this.chengePieceSound.play();
+    }
+
+    mobileChengeGame(){
+        this.mobileChenge = this.game.rotatePiece();
+        this.mobileChenge = this.updateView();
+        this.mobileChenge = this.chengePieceSound.play();
+    }
     
-    
-}
+
+}   
 
 
 const root = document.querySelector('#root');

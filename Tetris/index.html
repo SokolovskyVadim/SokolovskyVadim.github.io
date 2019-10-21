@@ -20,16 +20,18 @@
         </h1>
     </div>
     <div class="buttons">
-        <button class="buttons_button">L</button>
-        <button class="buttons_button">R</button>
-        <button class="buttons_button">D</button>
+        <button class="buttons_button" id="mobileLeft">Left</button>
+        <button class="buttons_button" id="mobileRight">Right</button>
+        <button class="buttons_button" id="mobileDown">Down</button>
+        <button class="buttons_button" id="mobileChenge">Rorate</button>
         <button class="buttons_button_2" id="buttonStartGame">Start game</button>
         <button class="buttons_button_2" id="buttonPauseGame">Pause game</button>
+        <button class="buttons_button_2" id="buttonResetGame">Reset game</button>
     </div>
-    <audio id="Start_game_music" preload repite>
+    <audio id="Start_game_music" preload loop>
             <source src="sounds/main_music.mp3" type="audio/mpeg">
     </audio>
-    <audio id="chengePieceSound" preload repite>
+    <audio id="chengePieceSound" preload>
             <source src="sounds/chengePieceSound.wav" type="audio/wav">
     </audio>
         
