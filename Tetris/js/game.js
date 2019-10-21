@@ -1,12 +1,11 @@
 //логика
-
+ const points  = {
+    '1': 40,
+    '2': 100,
+    '3': 300,
+    '4': 1200,
+}
 class Game {
-    static points = {
-        '1': 40,
-        '2': 100,
-        '3': 300,
-        '4': 1200,
-    }
 
     constructor() {
         this.reset();
@@ -271,7 +270,7 @@ class Game {
 
     updateScore(clearedLines) {
         if (clearedLines > 0){
-            this.score += Game.points[clearedLines] * (this.level + 1);
+            this.score += points[clearedLines] * (this.level + 1);
             this.lines += clearedLines;
         }
 
@@ -283,18 +282,18 @@ class Game {
     }
 }
 
-
+const colors = {
+    '1': 'cyan',
+    '2': 'blue',
+    '3': 'orange',
+    '4': 'yellow',
+    '5': 'green',
+    '6': 'purple',
+    '7': 'red'   
+};
 // Холст  
 class View {
-    static colors = {
-        '1': 'cyan',
-        '2': 'blue',
-        '3': 'orange',
-        '4': 'yellow',
-        '5': 'green',
-        '6': 'purple',
-        '7': 'red'   
-    };
+    
 
     constructor(element, width, height, rows, columns) {
         this.element = element;
@@ -378,7 +377,7 @@ class View {
                         this.playfieldY + (y * this.blockHeight), 
                         this.blockWidth, 
                         this.blockHeight, 
-                        View.colors[block]
+                        colors[block]
                     );
                 }
             }
@@ -410,7 +409,7 @@ class View {
                         this.panelY + 100 + (y * this.blockHeight * 0.5),
                         this.blockWidth * 0.5,
                         this.blockHeight * 0.5,
-                        View.colors[block]
+                        colors[block]
                     );
                 }
                 
@@ -440,37 +439,37 @@ class Controller {
         document.addEventListener('keyup', this.handleKeyUp.bind(this));
         // document.addEventListener('click', this.mobilePauseGame.bind(this));
 
-        var startGameMusic = document.getElementById('Start_game_music');
+        let startGameMusic = document.getElementById('Start_game_music');
         this.startGameMusic = startGameMusic;
 
-        var chengePieceSound = document.getElementById('chengePieceSound');
+        let chengePieceSound = document.getElementById('chengePieceSound');
         this.chengePieceSound = chengePieceSound;
         
-        var buttonStartGame = document.getElementById('buttonStartGame');
+        let buttonStartGame = document.getElementById('buttonStartGame');
         this.buttonStartGame = buttonStartGame;
         buttonStartGame.addEventListener('click', this.mobileStartGame.bind(this));
 
-        var buttonPauseGame = document.getElementById('buttonPauseGame');
+        let buttonPauseGame = document.getElementById('buttonPauseGame');
         this.buttonPauseGame = buttonPauseGame;
         buttonPauseGame.addEventListener('click', this.mobilePauseGame.bind(this));
 
-        var buttonResetGame = document.getElementById('buttonResetGame');
+        let buttonResetGame = document.getElementById('buttonResetGame');
         this.buttonResetGame = buttonResetGame;
         buttonResetGame.addEventListener('click', this.mobileResetGame.bind(this));
 
-        var mobileLeft = document.getElementById('mobileLeft');
+        let mobileLeft = document.getElementById('mobileLeft');
         this.mobileLeft = mobileLeft;
         mobileLeft.addEventListener('click', this.mobileLeftGame.bind(this));
 
-        var mobileRight = document.getElementById('mobileRight');
+        let mobileRight = document.getElementById('mobileRight');
         this.mobileRight = mobileRight;
         mobileRight.addEventListener('click', this.mobileRightGame.bind(this));
 
-        var mobileDown = document.getElementById('mobileDown');
+        let mobileDown = document.getElementById('mobileDown');
         this.mobileDown = mobileDown;
         mobileDown.addEventListener('click', this.mobileDownGame.bind(this));
 
-        var mobileChenge = document.getElementById('mobileChenge');
+        let mobileChenge = document.getElementById('mobileChenge');
         this.mobileChenge = mobileChenge;
         mobileChenge.addEventListener('click', this.mobileChengeGame.bind(this));
 
