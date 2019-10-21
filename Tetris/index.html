@@ -9,32 +9,33 @@
     <link rel="stylesheet" href="css/game.css">
 </head>
 <body>
-    <div id="root">
-        <h1>
-            <span class="color_red">T</span>
-            <span class="color_orange">E</span>
-            <span class="color_yellow">T</span>
-            <span class="color_green">R</span>
-            <span class="color_cyan">I</span>
-            <span class="color_purple">S</span>
-        </h1>
-    </div>
-    <div class="buttons">
-        <button class="buttons_button" id="mobileLeft">Left</button>
-        <button class="buttons_button" id="mobileRight">Right</button>
-        <button class="buttons_button" id="mobileDown">Down</button>
-        <button class="buttons_button" id="mobileChenge">Rorate</button>
-        <button class="buttons_button_2" id="buttonStartGame">Start game</button>
-        <button class="buttons_button_2" id="buttonPauseGame">Pause game</button>
-        <button class="buttons_button_2" id="buttonResetGame">Reset game</button>
-    </div>
-    <audio id="Start_game_music" preload loop>
-            <source src="sounds/main_music.mp3" type="audio/mpeg">
-    </audio>
-    <audio id="chengePieceSound" preload>
-            <source src="sounds/chengePieceSound.wav" type="audio/wav">
-    </audio>
-        
+    <div>
+        <div id="root">
+            <h1>
+                <span class="color_red">T</span>
+                <span class="color_orange">E</span>
+                <span class="color_yellow">T</span>
+                <span class="color_green">R</span>
+                <span class="color_cyan">I</span>
+                <span class="color_purple">S</span>
+            </h1>
+        </div>
+        <div class="buttons">
+            <button class="buttons_button" id="mobileLeft">Left</button>
+            <button class="buttons_button" id="mobileRight">Right</button>
+            <button class="buttons_button" id="mobileDown">Down</button>
+            <button class="buttons_button" id="mobileChenge">Rorate</button>
+            <button class="buttons_button_2" id="buttonStartGame">Start game</button>
+            <button class="buttons_button_2" id="buttonPauseGame">Pause game</button>
+            <button class="buttons_button_2" id="buttonResetGame">Reset game</button>
+        </div>
+        <audio id="Start_game_music" preload loop>
+                <source src="sounds/main_music.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="chengePieceSound" preload>
+                <source src="sounds/chengePieceSound.wav" type="audio/wav">
+        </audio>
+    </div>   
     <script src="js/game.js" type="module"></script>
 </body>
 </html>
