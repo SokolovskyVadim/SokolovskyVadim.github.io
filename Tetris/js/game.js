@@ -1,20 +1,22 @@
-//логика
+
+// очки для игры
  const points  = {
     '1': 40,
     '2': 100,
     '3': 300,
     '4': 1200,
 }
+//логика
 class Game {
 
     constructor() {
         this.reset();
     }
-
+//увеличение уровня
     get level() {
         return Math.floor(this.lines * 0.1);
     }
-
+//проверки и возврат значений
     getState() {
         const playfield = this.createPlayfield();
         const { y: pieceY, x: pieceX, blocks } = this.activePiece;
@@ -44,7 +46,7 @@ class Game {
             isGameOver: this.topOut
         };
     }
-
+//сброс игры
     reset() {
         this.score = 0;
         this.lines = 0;
@@ -54,7 +56,7 @@ class Game {
         this.nextPiece = this.createPiece();
 
     }
-
+//создание игрового поля
     createPlayfield() {
         const playfield = [];
 
@@ -68,7 +70,7 @@ class Game {
 
         return playfield;
     }
-
+// рандомное создание фигур
     createPiece() {
         const index = Math.floor(Math.random() * 7); 
         const type = 'IJLOSTZ'[index];
@@ -179,7 +181,7 @@ class Game {
         }
 
     }
-
+// один хитрый способ ворочать фигруры из 3 которых я узнал =)
     rotateBlocks(clockwise = true){
         const blocks = this.activePiece.blocks;
         const length = blocks.length;
@@ -206,7 +208,7 @@ class Game {
             }
         }
     }
-
+//столкновения
     hasCollision() {
         const { y: pieceY, x: pieceX, blocks } = this.activePiece;
 
@@ -224,7 +226,7 @@ class Game {
 
         return false;
     }
-
+// установка фигуры внизу игрового поля
     lockPiece() {
         const { y: pieceY, x: pieceX, blocks } = this.activePiece;
 
@@ -236,7 +238,7 @@ class Game {
             }
         }
     }
-
+//очистка линий
     clearLines() {
         const rows = 20;
         const columns = 10;
@@ -267,7 +269,7 @@ class Game {
 
         return lines.length;
     }
-
+//Обновление счета
     updateScore(clearedLines) {
         if (clearedLines > 0){
             this.score += points[clearedLines] * (this.level + 1);
@@ -275,13 +277,14 @@ class Game {
         }
 
     }
-
+//показ новой фигуры
     updatePieces() {
         this.activePiece = this.nextPiece;
         this.nextPiece = this.createPiece();
     }
 }
 
+//цвета фигур
 const colors = {
     '1': 'cyan',
     '2': 'blue',
@@ -324,13 +327,13 @@ class View {
 
         this.element.appendChild(this.canvas); 
     }
-
+//создание главного экрана
     renderMainScreen(state) {
         this.clearScreen();
         this.renderPlayfield(state);
         this.renderPanel(state);
     }
-
+//создание начальнго экрана
     renderStartScreen() {
         this.context.fillStyle = 'white';
         this.context.font = '28px "VT323"';
@@ -338,7 +341,7 @@ class View {
         this.context.textBaseline = 'middle';
         this.context.fillText('Press Enter to start', this.width / 2, this.height / 2); 
     }
-
+//создание  экрана паузы
     renderPauseScreen() {
         this.context.fillStyle = 'rgba(0,0,0,0.75)';
         this.context.fillRect(0, 0, this.width, this.height);
@@ -349,7 +352,7 @@ class View {
         this.context.textBaseline = 'middle';
         this.context.fillText('Press Enter to resume', this.width / 2, this.height / 2); 
     }
-
+//создание конечного экрана
     renderEndScreen({ score }){
         this.clearScreen();
 
@@ -361,11 +364,11 @@ class View {
         this.context.fillText(`Score: ${score}`, this. width / 2, this.height / 2); 
         this.context.fillText('Press ENTER to Restart', this. width / 2, this.height / 2 + 48); 
     }
-
+//очистка экрана
     clearScreen() {
         this.context.clearRect(0, 0, this.width, this.height);
     }
-    
+ //очистка следа фигур игрового поля   
     renderPlayfield({ playfield }) {
         for (let y = 0; y < playfield.length; y++) {
             for (let x = 0; x < playfield[y].length; x++) {
@@ -387,17 +390,17 @@ class View {
         this.context.lineWidth = this.playfieldBorderWidth;
         this.context.strokeRect(0, 0, this.playfieldWidth, this.playfieldHeight);
     } 
-
+//обновление левой панели
     renderPanel({ level, score, lines, nextPiece }) {
         this.context.textAlign = 'start';
         this.context.textBaseline = 'top';
         this.context.fillStyle = 'white';
-        this.context.font = '20px"VT323"';
+        this.context.font = '36px"VT323"';
 
         this.context.fillText(`Level: ${level}`, this.panelX, this.panelY + 0);
         this.context.fillText(`Score: ${score}`, this.panelX, this.panelY + 24);
         this.context.fillText(`lines: ${lines}`, this.panelX, this.panelY + 48);
-        this.context.fillText('Next:', this.panelX, this.panelY + 96);
+        this.context.fillText('Next:', this.panelX + 20, this.panelY + 96);
 
         for (let y = 0; y < nextPiece.blocks.length; y++) {
             for (let x = 0; x < nextPiece.blocks[y].length; x++) {
@@ -405,10 +408,10 @@ class View {
 
                 if(block) {
                     this.renderBlock(
-                        this.panelX + (x * this.blockWidth * 0.5),
-                        this.panelY + 100 + (y * this.blockHeight * 0.5),
-                        this.blockWidth * 0.5,
-                        this.blockHeight * 0.5,
+                        this.panelX + 20 + (x * this.blockWidth * 0.8),
+                        this.panelY + 120 + (y * this.blockHeight * 0.8),
+                        this.blockWidth * 0.8,
+                        this.blockHeight * 0.8,
                         colors[block]
                     );
                 }
@@ -417,7 +420,7 @@ class View {
             
         }
     }
-
+// обновление фигу
     renderBlock(x, y, width, height, color) {
         this.context.fillStyle = color;
         this.context.strokeStyle = 'black';
@@ -427,23 +430,29 @@ class View {
         this.context.strokeRect(x, y, width, height);
     }
 }
-
+// класс упраления
 class Controller {
     constructor(game, view) {
         this.game = game;
         this.view = view;
         this.intervalId = null;
         this.isPlaying = false;
-
+// создание звуков и кнопок упраления 
         document.addEventListener('keydown', this.handleKeyDown.bind(this));
         document.addEventListener('keyup', this.handleKeyUp.bind(this));
-        // document.addEventListener('click', this.mobilePauseGame.bind(this));
+
 
         let startGameMusic = document.getElementById('Start_game_music');
         this.startGameMusic = startGameMusic;
 
         let chengePieceSound = document.getElementById('chengePieceSound');
         this.chengePieceSound = chengePieceSound;
+
+        let gameoverSound = document.getElementById('game_over_music');
+        this.gameoverSound = gameoverSound;
+
+        let pauseSound = document.getElementById('pause_music');
+        this.pauseSound = pauseSound;
         
         let buttonStartGame = document.getElementById('buttonStartGame');
         this.buttonStartGame = buttonStartGame;
@@ -494,6 +503,7 @@ class Controller {
         this.stopTimer();
         this.updateView();
         this.startGameMusic.pause();
+        this.pauseSound.play();
     }
 
     reset () {
@@ -506,6 +516,8 @@ class Controller {
 
         if (state.isGameOver) {
             this.view.renderEndScreen(state);
+            this.startGameMusic.pause();
+            this.gameoverSound.play();
         } else if (!this.isPlaying) {
             this.view.renderPauseScreen();
         } else
@@ -584,7 +596,7 @@ class Controller {
 
     mobileResetGame(){
         const state = this.game.getState();
-        
+    
         if(state.isGameOver) {
             this.reset();
         }
