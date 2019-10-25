@@ -395,7 +395,7 @@ class View {
         this.context.textAlign = 'start';
         this.context.textBaseline = 'top';
         this.context.fillStyle = 'white';
-        this.context.font = '36px"VT323"';
+        this.context.font = '28px "VT323"';
 
         this.context.fillText(`Level: ${level}`, this.panelX, this.panelY + 0);
         this.context.fillText(`Score: ${score}`, this.panelX, this.panelY + 24);
