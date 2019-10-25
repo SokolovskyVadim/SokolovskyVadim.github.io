@@ -3,7 +3,7 @@ body {
     margin: 0;
     background-image: url('../img/back.jpg');
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     font-family: 'VT323', monospace;
     height: 100vh;
 }
