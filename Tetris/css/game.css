@@ -103,7 +103,9 @@ body {
     .buttons button {
         outline: none;
     }
-    
+    .how_to_play {
+       display: none;
+    }
 }
 @media screen and (max-width: 414px) {
     #root {
