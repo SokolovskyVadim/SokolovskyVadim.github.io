@@ -47,31 +47,31 @@
 // КОНЕЦ МОДАЛЬНОГО ОКНА
 
 //поворачиваюшиеся менюшки
-(function(){
-	$('.flex-container').waitForImages(function() {
-		$('.spinner').fadeOut();
-	}, $.noop, true);
-	
-	$(".flex-slide").each(function(){
-		$(this).hover(function(){
-			$(this).find('.flex-title').css({
-				transform: 'rotate(0deg)',
-				top: '30%'
-			});
-			$(this).find('.flex-about').css({
-				opacity: '1'
-			});
-		}, function(){
-			$(this).find('.flex-title').css({
-				transform: 'rotate(90deg)',
-				top: '45%'
-			});
-			$(this).find('.flex-about').css({
-				opacity: '0'
-			});
-		})
-	});
-})();
+$('body').waitForImages(function() {
+   $('.spinner').fadeOut();
+}, $.noop, true);
+
+// (function(){
+// 	$(".flex-slide").each(function(){
+// 		$(this).hover(function(){
+// 			$(this).find('.flex-title').css({
+// 				transform: 'rotate(0deg)',
+// 				top: '30%'
+// 			});
+// 			$(this).find('.flex-about').css({
+// 				opacity: '1'
+// 			});
+// 		}, function(){
+// 			$(this).find('.flex-title').css({
+// 				transform: 'rotate(90deg)',
+// 				top: '45%'
+// 			});
+// 			$(this).find('.flex-about').css({
+// 				opacity: '0'
+// 			});
+// 		})
+// 	});
+// })();
 //поворачиваюшиеся менюшки(конец)
 
 
@@ -79,7 +79,7 @@
 $(document).ready(function(){
    // Фикмированная шапка при скролле
    $(window).scroll(function(){
-      if ($(this).scrollTop() >= 150) {
+      if ($(this).scrollTop() >= 300) {
          $('.header_bottom_2').fadeIn("slow")
       } else {
          $('.header_bottom_2').fadeOut("slow");
