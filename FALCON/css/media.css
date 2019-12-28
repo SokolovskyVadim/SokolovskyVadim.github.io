@@ -1,11 +1,15 @@
+@media all and (max-width:1067px){
+    main {
+        height: auto;
+    }
+}
 @media all and (max-width:1024px){
 .site-wrap{display:none}
 .header_bottom_2{display:none!important}
 .mobile_menu{display:block}
 .header_top_mobile{display:flex;justify-content:center;height:95px;border-bottom:1px solid rgba(245,245,245,.2);margin-top:25px}
 .overlay_mobile{background-color:rgba(0,0,0,.7);height:100%;position:fixed;width:100%;z-index:4}
-main{height:55vh}
-.text_caption {margin-top: 0px;}
+.text_caption {margin-top: 30px;}
 .flex-container{height:35vh}
 footer{justify-content:center}
 .container{padding:0 30px}
@@ -23,7 +27,6 @@ footer{justify-content:center}
 footer div:nth-child(1){text-align: center}
 }
 @media all and (max-width:768px){
-main{height: 75vh}
 .about_us_block{height:30vh}
 .about_us_btn{left:-100px;width:130%;height:15vh;box-shadow:0 -40px 40px -11px #004360}
 #about_us_btn{bottom:30px}
@@ -40,7 +43,6 @@ main{height: 75vh}
 .top_logo_size{width:200px;position:relative;left:80px}
 }
 @media all and (max-width:414px){
-main{height:93vh}
 .about_us_block{height:70vh}
 .about_us_btn{left:0;width:auto;height: 20vh}
 .jobs_text_in h3{text-align:center}
@@ -57,7 +59,6 @@ footer div:nth-child(1){text-align:center;font-size:x-small}
 }
 
 @media all and (max-width:375px){
-main{height:100vh}
 .about_us_block {height: 60vh}
 .jobs{height:115vh}
 .modal{top:55%;max-width:266px}
