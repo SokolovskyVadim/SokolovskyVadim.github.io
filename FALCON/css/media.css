@@ -17,7 +17,7 @@ footer{justify-content:center}
 .services_cart{margin-bottom:35px}
 .we_best_block{flex-wrap:wrap;justify-content:center}
 .we_best_cart{margin:20px 0}
-.jobs{flex-wrap:wrap;justify-content:center;height:65vh}
+.jobs{flex-wrap:wrap;justify-content:center}
 .jobs_text_in>span:nth-child(3){text-align:center}
 .contacts{flex-wrap:wrap;justify-content:center;text-align:center}
 .form_bot{display:flex;flex-direction:column;justify-content:center;align-items:center}
@@ -49,7 +49,6 @@ footer div:nth-child(1){text-align: center}
 .jobs_text_in h3{text-align:center}
 .text_caption h3{text-align:center}
 .contacts_block{margin-left:0}
-.jobs{height:98vh}
 footer div:nth-child(1){text-align:center;font-size:x-small}
 .footer_menu{flex-wrap:wrap;justify-content:center}
 .modal{top:55%;max-width:266px}
@@ -61,14 +60,12 @@ footer div:nth-child(1){text-align:center;font-size:x-small}
 
 @media all and (max-width:375px){
 .about_us_block {height: 60vh}
-.jobs{height:115vh}
 .modal{top:55%;max-width:266px}
 .top_logo_size{left:50px}
 .main_h1{font-size:35px}
 .services_block h3{text-align:center}
 .modal{top:55%;max-width:266px}
 .menu-list ul li a{font-size: 16px}
-.jobs {height: 142vh}
 }
 
 .mobile_menu_contacts ul li{
