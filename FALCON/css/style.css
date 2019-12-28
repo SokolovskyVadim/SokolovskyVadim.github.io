@@ -1,7 +1,7 @@
 .clearfix:after{content:".";visibility:hidden;display:block;height:0;clear:both}
 html{scroll-behavior:smooth}
 body{font-family:Montserrat,sans-serif;color:#004360; background-color: #004360;}
-main{display:flex;justify-content:center;width:100%;height:100vh;min-height:600px;background:url(../img/main_background.jpg) no-repeat center;background-size:cover}
+main{display:flex;justify-content:center;width:100%;background:url(../img/main_background.jpg) no-repeat center;background-size:cover}
 a{text-decoration: none; color: white;}
 #go-top{position:fixed;bottom:25px;right:25px;text-align:center;cursor:pointer;display:none;width:60px;height:60px;background:#c0c0c077;line-height:30px;border-radius:50%;display:flex;justify-content:center;align-items:center;z-index:4;font-size:30px;box-shadow:0 0 40px -10px #000}
 #go-top:hover{background:#333;color:#fff}
@@ -28,9 +28,9 @@ nav ul li:hover{background-color:rgba(44,136,176,.5);-webkit-box-shadow:0 0 15px
 .header_bottom_2 div ul{display:flex;width:100%;height:70px;background:#f1f1f1;justify-content:center;align-items:center}
 .header_bottom_2 div ul li a{color:#000;text-shadow:#000 0 0 0;font-size:16px}
 .header_bottom_2 div ul li a:hover{color:#004360;text-shadow:#000 0 0 0;font-size:16px}
-.main_bottom{display:flex;flex-direction:column;align-items:center}
 .main_h1{color:#fff;font-size:80px;text-align:center;margin-top:160px}
 .main_h2{color:#fff;font-size:30px;text-align:center}
+.main-button-top{display: flex;justify-content: center;}
 .main_button{color:#fff;background:#004360;border:none;height:50px;width:300px;border-radius:30px;-webkit-box-shadow:0 0 15px 2px rgba(0,0,0,.5);-moz-box-shadow:0 0 15px 2px rgba(0,0,0,.5);box-shadow:0 0 15px 2px rgba(0,0,0,.5);margin-top:70px;outline:0;cursor:pointer}
 .main_button:hover{color:#fff;background:#2c88b0;border:none;height:50px;width:300px;border-radius:30px;-webkit-box-shadow:0 0 15px 2px rgba(0,0,0,.5);-moz-box-shadow:0 0 15px 2px rgba(0,0,0,.5);box-shadow:0 0 15px 2px rgba(0,0,0,.5);margin-top:70px;outline:0;cursor:pointer}
 .overlay{opacity:0;visibility:hidden;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.7);z-index:20;transition:.4s all}
@@ -69,7 +69,7 @@ nav ul li:hover{background-color:rgba(44,136,176,.5);-webkit-box-shadow:0 0 15px
 .about_us_block h2{text-align:center;font-size:36px;padding:50px}
 .about_us_block span{display:inline-flex;margin:0 30px;text-align:center}
 
-.text_caption{display:flex;flex-direction:column;align-items:center;margin-top:80px;padding: 0px 20px;}
+.text_caption{margin-top:80px;padding: 0px 20px;text-align: center;}
 .text_caption h3{font-size:36px;color:#fff}
 .text_caption>span:nth-child(3){color:#fff;font-size:25px;line-height:30px;text-align:center}
 .text_caption>span:nth-child(4){font-size:18px;line-height:26px;text-align:center;margin:30px 0 50px 0;color:#fff}
@@ -77,11 +77,11 @@ nav ul li:hover{background-color:rgba(44,136,176,.5);-webkit-box-shadow:0 0 15px
 .parallax-window{min-height:400px;background:0 0}
 .services_block{display:flex;flex-direction:column;align-items:center}
 .services_block h3{color:#fff;font-size:36px;margin-top:80px}
-.white_line{height:5px;width:80px;background:#2c88b0;margin:30px 0}
+.white_line{height:5px;width:80px;background:#2c88b0;margin:30px auto}
 .services_block span{color:#fff;font-size:30px;text-align:center}
 .services_column{display:flex;flex-direction:column;margin-bottom:50px}
 .services_row{display:flex;flex-wrap:wrap;margin-top:50px;justify-content:space-between}
-.services_cart{display:flex;flex-basis:300px;flex-direction:column;align-items:center;color:#fff}
+.services_cart{max-width:300px;color:#fff; text-align: center;}
 .services_cart div:nth-child(1){font-size:80px;color:#2c88b0;margin-bottom:20px}
 .services_cart div:nth-child(2){text-align:center;font-size:25px;margin-bottom:20px}
 .services_cart div:nth-child(3){text-align:center}
@@ -97,7 +97,7 @@ nav ul li:hover{background-color:rgba(44,136,176,.5);-webkit-box-shadow:0 0 15px
 .we_best_cart h4 {font-size:24px;color:#fff; margin-bottom: 20px;}
 .jobs{display:flex;align-items:center;margin-top: 80px;}
 .jobs_text{flex-basis:750px;color:#fff;align-self:baseline}
-.jobs_text_in{display:flex;flex-direction:column;align-items:center;margin-top:30px}
+.jobs_text_in{margin-top:30px; text-align: center;}
 .jobs_text_in h3{font-size:36px}
 .jobs_text_in>span:nth-child(3){color:#fff;font-size:25px;line-height:30px}
 .jobs_text_in>span:nth-child(4){font-size:18px;line-height:26px;text-align:center;margin:30px 0 50px 0}
