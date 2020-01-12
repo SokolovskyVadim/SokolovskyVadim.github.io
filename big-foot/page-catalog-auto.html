@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Каталог авто</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/2bcb40ab28.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="lib/slick/slick.css">
+    <link rel="stylesheet" href="lib/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+
+<body>
+    <div class="more-pages-wrp">
+        <div class="more-pages">
+          <div class="more-pages-cl">
+            <span class="more-pages-text">
+              Здесь вы можете посмотреть другие страницы!
+            </span>
+            <span class="more-pages-btn">
+                <svg id="Layer" enable-background="new 0 0 64 64" height="512" viewBox="0 0 64 64" width="512" xmlns="http://www.w3.org/2000/svg">
+                  <circle class="svg1" cx="32" cy="32" fill="#ff7043" r="22"/>
+                  <g class="svg2" fill="#012e52">
+                  <path d="m29.283 12.19c1.761-.252 3.672-.252 5.434 0 .097.014.191.021.286.021.979 0 1.834-.72 1.977-1.717.156-1.094-.604-2.107-1.696-2.263-2.137-.304-4.431-.304-6.566 0-1.093.156-1.853 1.169-1.697 2.263.156 1.093 1.171 1.855 2.262 1.696z"/>
+                  <path d="m42.91 10.619c-.984-.503-2.188-.112-2.691.87-.502.984-.112 2.188.871 2.691 6.729 3.441 10.91 10.269 10.91 17.82 0 11.028-8.972 20-20 20s-20-8.972-20-20c0-7.551 4.181-14.379 10.911-17.819.983-.503 1.373-1.708.87-2.691-.503-.984-1.709-1.373-2.691-.87-8.074 4.127-13.09 12.319-13.09 21.38 0 13.233 10.766 24 24 24 13.233 0 24-10.767 24-24 0-9.061-5.016-17.253-13.09-21.381z"/>
+                  <path d="m22.586 36.586c-.781.781-.781 2.047 0 2.828l8 8c.39.391.902.586 1.414.586s1.023-.195 1.414-.586l8-8c.781-.781.781-2.047 0-2.828s-2.047-.781-2.828 0l-4.586 4.586v-23.172c0-1.104-.896-2-2-2s-2 .896-2 2v23.172l-4.586-4.586c-.78-.781-2.048-.781-2.828 0z"/>
+                  </g>
+                </svg>
+            </span>
+          </div>
+          <div class="more-pages-list">
+            <ul>
+              <li>
+                <a href="index.html">
+                  Главная
+                </a>
+              </li>
+              <li>
+                <a href="page-catalog-auto.html">
+                  Каталог Авто
+                </a>
+              </li>
+              <li>
+                <a href="page-catalog-sellers.html">
+                  Страница продавца
+                </a>
+              </li>
+              <li>
+                <a href="page-catalog.html">
+                  Каталог 
+                </a>
+              </li>
+              <li>
+                <a href="page-personal-area-advertisement.html">
+                  Подача объявления
+                </a>
+              </li>
+              <li>
+                <a href="page-personal-area-chat.html">
+                  Чат
+                </a>
+              </li>
+              <li>
+                <a href="page-personal-area-edit-user-registr.html">
+                 Регистрация
+                </a>
+              </li>
+              <li>
+                <a href="page-personal-area-edit-user.html">
+                  Изменение персональных данных
+                </a>
+              </li>
+              <li>
+                <a href="page-personal-area-favorite.html">
+                  Избранное
+                </a>
+              </li>
+              <li>
+                <a href="page-personal-area-my-ads.html">
+                  Мои объявления
+                </a>
+              </li>
+              <li>
+                <a href="page-product-auto-item.html">
+                  Авто карточка товара
+                </a>
+              </li>
+              <li>
+                <a href="page-product-item.html">
+                 Карточка товара
+                </a>
+              </li>
+            </ul>
+        </div>
+        </div>
+      </div>
+    <main>
+        <section class="breadcrumbs container">
+            <ul class="breadcrumb">
+                <li><a href="#">Главная</a></li>
+                <li>Каталог авто</li>
+            </ul>
+        </section>
+        <section class="catalog-auto-top-info-bar flex container">
+            <div class="catalog-left-auto-section-wrapper">
+                <div class="container catalog-auto-top-info-bar-in lite-gray">
+                    <div class="catalog-head-right-section-selects">
+                        <div>
+                            <div>Соритировать по:  
+                                <select name="" id="">
+                                    <option value="">По популярности</option>
+                                    <option value="">От дешевых</option>
+                                    <option value="">От дорогих</option>
+                                    <option value="">По алфавиту</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <div>показывать по: 
+                                <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-head-right-section-btns">
+                        <button class="list-btn-catalog-auto"><i class="fas fa-list" aria-hidden="true"></i></button>
+                        <button class="grid-btn-catalog-auto"><i class="fas fa-border-all" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="mobile-btn-for-catalog-menu">
+                        Параметры
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-right-auto-section-wrapper flex-c-c">
+                <div class="catalog-menu-article">Параметры Авто</div>
+            </div>
+        </section>
+        <section class="catalog-goods-block-auto container">
+            <div class="catalog-left-auto-section-wrapper">
+                <div class="catalog-left-auto-section">
+                    <div class="product-item-list-auto-for-marketing">
+                        <div class="product-item-list-auto">
+                            <div class="product-img-auto-list">
+                                <img src="img/car.jpg" alt="кофеварка" class="">
+                            </div>
+                            <div class="product-name-block-auto-list">
+                                <div class="product-name-auto">
+                                    Рожковая помповая кофеварка Vitek VT-1517 BN
+                                </div>
+                                <div class="listing-item-desc">
+                                    <span> 2002, </span>
+                                    автомат,
+                                    3.2 л.,
+                                    бензин, седан, 195000 миль </div>
+                                <div class="product-list-auto-text">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim dolore, fugit placeat
+                                    sed est obcaecati totam animi ex
+                                </div>
+                                <div class="product-opportunities-auto-list">
+                                    <span><i class="fas fa-tachometer-alt"></i> 31.730км</span>
+                                    <span><i class="fas fa-filter"></i></i> 12.5/100км</span>
+                                </div>
+                                <div class="product-sity-auto-list">
+                                    <span>г.Минск</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="product-price-auto-list">
+                                    000.00руб
+                                </div>
+                                <div class="product-line-auto-list">
+                                </div>
+                                <div class="product-category-auto">
+                                    <span class="product-category-auto-prefix">+375</span>
+                                    <span class="product-category-auto-show-number">показать номер</span>
+                                    <span class="product-category-auto-number">(XX) XXX-XX-XX</span>
+                                </div>
+                                <div class="product-category-bottom-icones-auto">
+                                    <div><i class="far fa-heart"></i></div>
+                                    <div><i class="fas fa-chart-bar"></i></div>
+                                    <div><i class="far fa-envelope"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item-list-auto">
+                            <div class="product-img-auto-list">
+                                <img src="img/car.jpg" alt="кофеварка" class="">
+                            </div>
+                            <div class="product-name-block-auto-list">
+                                <div class="product-name-auto">
+                                    Рожковая помповая кофеварка Vitek VT-1517 BN
+                                </div>
+                                <div class="listing-item-desc">
+                                    <span> 2002, </span>
+                                    автомат,
+                                    3.2 л.,
+                                    бензин, седан, 195000 миль </div>
+                                <div class="product-list-auto-text">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim dolore, fugit placeat
+                                    sed est obcaecati totam animi ex
+                                </div>
+                                <div class="product-opportunities-auto-list">
+                                    <span><i class="fas fa-tachometer-alt"></i> 31.730км</span>
+                                    <span><i class="fas fa-filter"></i></i> 12.5/100км</span>
+                                </div>
+                                <div class="product-sity-auto-list">
+                                    <span>г.Минск</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="product-price-auto-list">
+                                    000.00руб
+                                </div>
+                                <div class="product-line-auto-list">
+                                </div>
+                                <div class="product-category-auto">
+                                    <span class="product-category-auto-prefix">+375</span>
+                                    <span class="product-category-auto-show-number">показать номер</span>
+                                    <span class="product-category-auto-number">(XX) XXX-XX-XX</span>
+                                </div>
+                                <div class="product-category-bottom-icones-auto">
+                                    <div><i class="far fa-heart"></i></div>
+                                    <div><i class="fas fa-chart-bar"></i></div>
+                                    <div><i class="far fa-envelope"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-item-list-auto">
+                            <div class="product-img-auto-list">
+                                <img src="img/car.jpg" alt="кофеварка" class="">
+                            </div>
+                            <div class="product-name-block-auto-list">
+                                <div class="product-name-auto">
+                                    Рожковая помповая кофеварка Vitek VT-1517 BN
+                                </div>
+                                <div class="listing-item-desc">
+                                    <span> 2002, </span>
+                                    автомат,
+                                    3.2 л.,
+                                    бензин, седан, 195000 миль </div>
+                                <div class="product-list-auto-text">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim dolore, fugit placeat
+                                    sed est obcaecati totam animi ex
+                                </div>
+                                <div class="product-opportunities-auto-list">
+                                    <span><i class="fas fa-tachometer-alt"></i> 31.730км</span>
+                                    <span><i class="fas fa-filter"></i></i> 12.5/100км</span>
+                                </div>
+                                <div class="product-sity-auto-list">
+                                    <span>г.Минск</span>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="product-price-auto-list">
+                                    000.00руб
+                                </div>
+                                <div class="product-line-auto-list">
+                                </div>
+                                <div class="product-category-auto">
+                                    <span class="product-category-auto-prefix">+375</span>
+                                    <span class="product-category-auto-show-number">показать номер</span>
+                                    <span class="product-category-auto-number">(XX) XXX-XX-XX</span>
+                                </div>
+                                <div class="product-category-bottom-icones-auto">
+                                    <div><i class="far fa-heart"></i></div>
+                                    <div><i class="fas fa-chart-bar"></i></div>
+                                    <div><i class="far fa-envelope"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item-list-auto">
+                        <div class="product-img-auto-list">
+                            <img src="img/car.jpg" alt="кофеварка" class="">
+                        </div>
+                        <div class="product-name-block-auto-list">
+                            <div class="product-name-auto">
+                                Рожковая помповая кофеварка Vitek VT-1517 BN
+                            </div>
+                            <div class="listing-item-desc">
+                                <span> 2002, </span>
+                                автомат,
+                                3.2 л.,
+                                бензин, седан, 195000 миль </div>
+                            <div class="product-list-auto-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim dolore, fugit placeat
+                                sed est obcaecati totam animi ex
+                            </div>
+                            <div class="product-opportunities-auto-list">
+                                <span><i class="fas fa-tachometer-alt"></i> 31.730км</span>
+                                <span><i class="fas fa-filter"></i></i> 12.5/100км</span>
+                            </div>
+                            <div class="product-sity-auto-list">
+                                <span>г.Минск</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price-auto-list">
+                                000.00руб
+                            </div>
+                            <div class="product-line-auto-list">
+                            </div>
+                            <div class="product-category-auto">
+                                <span class="product-category-auto-prefix">+375</span>
+                                <span class="product-category-auto-show-number">показать номер</span>
+                                <span class="product-category-auto-number">(XX) XXX-XX-XX</span>
+                            </div>
+                            <div class="product-category-bottom-icones-auto">
+                                <div><i class="far fa-heart"></i></div>
+                                <div><i class="fas fa-chart-bar"></i></div>
+                                <div><i class="far fa-envelope"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item-list-auto">
+                        <div class="product-img-auto-list">
+                            <img src="img/car.jpg" alt="кофеварка" class="">
+                        </div>
+                        <div class="product-name-block-auto-list">
+                            <div class="product-name-auto">
+                                Рожковая помповая кофеварка Vitek VT-1517 BN
+                            </div>
+                            <div class="listing-item-desc">
+                                <span> 2002, </span>
+                                автомат,
+                                3.2 л.,
+                                бензин, седан, 195000 миль </div>
+                            <div class="product-list-auto-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim dolore, fugit placeat
+                                sed est obcaecati totam animi ex
+                            </div>
+                            <div class="product-opportunities-auto-list">
+                                <span><i class="fas fa-tachometer-alt"></i> 31.730км</span>
+                                <span><i class="fas fa-filter"></i></i> 12.5/100км</span>
+                            </div>
+                            <div class="product-sity-auto-list">
+                                <span>г.Минск</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price-auto-list">
+                                000.00руб
+                            </div>
+                            <div class="product-line-auto-list">
+                            </div>
+                            <div class="product-category-auto">
+                                <span class="product-category-auto-prefix">+375</span>
+                                <span class="product-category-auto-show-number">показать номер</span>
+                                <span class="product-category-auto-number">(XX) XXX-XX-XX</span>
+                            </div>
+                            <div class="product-category-bottom-icones-auto">
+                                <div><i class="far fa-heart"></i></div>
+                                <div><i class="fas fa-chart-bar"></i></div>
+                                <div><i class="far fa-envelope"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item-list-auto">
+                        <div class="product-img-auto-list">
+                            <img src="img/car.jpg" alt="кофеварка" class="">
+                        </div>
+                        <div class="product-name-block-auto-list">
+                            <div class="product-name-auto">
+                                Рожковая помповая кофеварка Vitek VT-1517 BN
+                            </div>
+                            <div class="listing-item-desc">
+                                <span> 2002, </span>
+                                автомат,
+                                3.2 л.,
+                                бензин, седан, 195000 миль </div>
+                            <div class="product-list-auto-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim dolore, fugit placeat
+                                sed est obcaecati totam animi ex
+                            </div>
+                            <div class="product-opportunities-auto-list">
+                                <span><i class="fas fa-tachometer-alt"></i> 31.730км</span>
+                                <span><i class="fas fa-filter"></i></i> 12.5/100км</span>
+                            </div>
+                            <div class="product-sity-auto-list">
+                                <span>г.Минск</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price-auto-list">
+                                000.00руб
+                            </div>
+                            <div class="product-line-auto-list">
+                            </div>
+                            <div class="product-category-auto">
+                                <span class="product-category-auto-prefix">+375</span>
+                                <span class="product-category-auto-show-number">показать номер</span>
+                                <span class="product-category-auto-number">(XX) XXX-XX-XX</span>
+                            </div>
+                            <div class="product-category-bottom-icones-auto">
+                                <div><i class="far fa-heart"></i></div>
+                                <div><i class="fas fa-chart-bar"></i></div>
+                                <div><i class="far fa-envelope"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item-list-auto">
+                        <div class="product-img-auto-list">
+                            <img src="img/car.jpg" alt="кофеварка" class="">
+                        </div>
+                        <div class="product-name-block-auto-list">
+                            <div class="product-name-auto">
+                                Рожковая помповая кофеварка Vitek VT-1517 BN
+                            </div>
+                            <div class="listing-item-desc">
+                                <span> 2002, </span>
+                                автомат,
+                                3.2 л.,
+                                бензин, седан, 195000 миль </div>
+                            <div class="product-list-auto-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim dolore, fugit placeat
+                                sed est obcaecati totam animi ex
+                            </div>
+                            <div class="product-opportunities-auto-list">
+                                <span><i class="fas fa-tachometer-alt"></i> 31.730км</span>
+                                <span><i class="fas fa-filter"></i></i> 12.5/100км</span>
+                            </div>
+                            <div class="product-sity-auto-list">
+                                <span>г.Минск</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price-auto-list">
+                                000.00руб
+                            </div>
+                            <div class="product-line-auto-list">
+                            </div>
+                            <div class="product-category-auto">
+                                <span class="product-category-auto-prefix">+375</span>
+                                <span class="product-category-auto-show-number">показать номер</span>
+                                <span class="product-category-auto-number">(XX) XXX-XX-XX</span>
+                            </div>
+                            <div class="product-category-bottom-icones-auto">
+                                <div><i class="far fa-heart"></i></div>
+                                <div><i class="fas fa-chart-bar"></i></div>
+                                <div><i class="far fa-envelope"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item-list-auto">
+                        <div class="product-img-auto-list">
+                            <img src="img/car.jpg" alt="кофеварка" class="">
+                        </div>
+                        <div class="product-name-block-auto-list">
+                            <div class="product-name-auto">
+                                Рожковая помповая кофеварка Vitek VT-1517 BN
+                            </div>
+                            <div class="listing-item-desc">
+                                <span> 2002, </span>
+                                автомат,
+                                3.2 л.,
+                                бензин, седан, 195000 миль </div>
+                            <div class="product-list-auto-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim dolore, fugit placeat
+                                sed est obcaecati totam animi ex
+                            </div>
+                            <div class="product-opportunities-auto-list">
+                                <span><i class="fas fa-tachometer-alt"></i> 31.730км</span>
+                                <span><i class="fas fa-filter"></i></i> 12.5/100км</span>
+                            </div>
+                            <div class="product-sity-auto-list">
+                                <span>г.Минск</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price-auto-list">
+                                000.00руб
+                            </div>
+                            <div class="product-line-auto-list">
+                            </div>
+                            <div class="product-category-auto">
+                                <span class="product-category-auto-prefix">+375</span>
+                                <span class="product-category-auto-show-number">показать номер</span>
+                                <span class="product-category-auto-number">(XX) XXX-XX-XX</span>
+                            </div>
+                            <div class="product-category-bottom-icones-auto">
+                                <div><i class="far fa-heart"></i></div>
+                                <div><i class="fas fa-chart-bar"></i></div>
+                                <div><i class="far fa-envelope"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item-list-auto">
+                        <div class="product-img-auto-list">
+                            <img src="img/car.jpg" alt="кофеварка" class="">
+                        </div>
+                        <div class="product-name-block-auto-list">
+                            <div class="product-name-auto">
+                                Рожковая помповая кофеварка Vitek VT-1517 BN
+                            </div>
+                            <div class="listing-item-desc">
+                                <span> 2002, </span>
+                                автомат,
+                                3.2 л.,
+                                бензин, седан, 195000 миль </div>
+                            <div class="product-list-auto-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim dolore, fugit placeat
+                                sed est obcaecati totam animi ex
+                            </div>
+                            <div class="product-opportunities-auto-list">
+                                <span><i class="fas fa-tachometer-alt"></i> 31.730км</span>
+                                <span><i class="fas fa-filter"></i></i> 12.5/100км</span>
+                            </div>
+                            <div class="product-sity-auto-list">
+                                <span>г.Минск</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price-auto-list">
+                                000.00руб
+                            </div>
+                            <div class="product-line-auto-list">
+                            </div>
+                            <div class="product-category-auto">
+                                <span class="product-category-auto-prefix">+375</span>
+                                <span class="product-category-auto-show-number">показать номер</span>
+                                <span class="product-category-auto-number">(XX) XXX-XX-XX</span>
+                            </div>
+                            <div class="product-category-bottom-icones-auto">
+                                <div><i class="far fa-heart"></i></div>
+                                <div><i class="fas fa-chart-bar"></i></div>
+                                <div><i class="far fa-envelope"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-item-list-auto">
+                        <div class="product-img-auto-list">
+                            <img src="img/car.jpg" alt="кофеварка" class="">
+                        </div>
+                        <div class="product-name-block-auto-list">
+                            <div class="product-name-auto">
+                                Рожковая помповая кофеварка Vitek VT-1517 BN
+                            </div>
+                            <div class="listing-item-desc">
+                                <span> 2002, </span>
+                                автомат,
+                                3.2 л.,
+                                бензин, седан, 195000 миль </div>
+                            <div class="product-list-auto-text">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim dolore, fugit placeat
+                                sed est obcaecati totam animi ex
+                            </div>
+                            <div class="product-opportunities-auto-list">
+                                <span><i class="fas fa-tachometer-alt"></i> 31.730км</span>
+                                <span><i class="fas fa-filter"></i></i> 12.5/100км</span>
+                            </div>
+                            <div class="product-sity-auto-list">
+                                <span>г.Минск</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="product-price-auto-list">
+                                000.00руб
+                            </div>
+                            <div class="product-line-auto-list">
+                            </div>
+                            <div class="product-category-auto">
+                                <span class="product-category-auto-prefix">+375</span>
+                                <span class="product-category-auto-show-number">показать номер</span>
+                                <span class="product-category-auto-number">(XX) XXX-XX-XX</span>
+                            </div>
+                            <div class="product-category-bottom-icones-auto">
+                                <div><i class="far fa-heart"></i></div>
+                                <div><i class="fas fa-chart-bar"></i></div>
+                                <div><i class="far fa-envelope"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="catalog-cart-for-marketing">
+                        реклама
+                    </div>
+                </div>
+            </div>
+            <div class="catalog-right-auto-section-wrapper">
+                <div class="catalog-right-auto-section">
+                    <form action="" class="left-menus-block-auto-form">
+                        <div class="left-menus-block-auto">
+                            <div class="price_checker_changer_auto">
+                                <div>Валюта</div>
+                                <div class="currency_auto_block_wrapper">
+                                    <input type="checkbox" name="field" class="currency_auto_block_rub" checked>
+                                    <input type="checkbox" name="field" class="currency_auto_block_baks">
+                                    <input type="checkbox" name="field" class="currency_auto_block_euro">
+                                </div>
+                            </div>
+                            <div class="left_menus_select_block">
+                                <div class="catalog-left-side-inputs-auto">
+                                    <span class="catalog-left-side-inputs-auto-prise-article">Цена</span>
+                                    <div class="price_checker_block">
+                                        <select type="number" class="price_checker_left_auto">
+                                            <option value="">от</option>
+                                            <option value="7">Audi</option>
+                                            <option value="1">Audi</option>
+                                            <option value="2">Audi</option>
+                                            <option value="3">Audi</option>
+                                            <option value="4">Audi</option>
+                                            <option value="5">Audi</option>
+                                            <option value="6">Audi</option>
+                                        </select>
+                                        <select type="number" class="price_checker_right_auto">
+                                            <option value="">до</option>
+                                            <option value="7">Audi</option>
+                                            <option value="1">Audi</option>
+                                            <option value="2">Audi</option>
+                                            <option value="3">Audi</option>
+                                            <option value="4">Audi</option>
+                                            <option value="5">Audi</option>
+                                            <option value="6">Audi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left_menus_select_block">
+                                <div class="catalog-left-side-inputs-auto">
+                                    <span class="catalog-left-side-inputs-auto-prise-article">Год Выпуска</span>
+                                    <div class="price_checker_block">
+                                        <select type="number" class="price_checker_left_auto">
+                                            <option value="">с</option>
+                                            <option value="7">Audi</option>
+                                            <option value="1">Audi</option>
+                                            <option value="2">Audi</option>
+                                            <option value="3">Audi</option>
+                                            <option value="4">Audi</option>
+                                            <option value="5">Audi</option>
+                                            <option value="6">Audi</option>
+                                        </select>
+                                        <select type="number" class="price_checker_right_auto">
+                                            <option value="">по</option>
+                                            <option value="7">Audi</option>
+                                            <option value="1">Audi</option>
+                                            <option value="2">Audi</option>
+                                            <option value="3">Audi</option>
+                                            <option value="4">Audi</option>
+                                            <option value="5">Audi</option>
+                                            <option value="6">Audi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left_menus_article_auto">Марка Авто</div>
+                            <div class="left_menus_select_block_auto">
+                                <select name="" id="main-country-select" class="country_block_select_auto">
+                                    <option value="">Марка автомобиля</option>
+                                    <option value="7">Audi</option>
+                                    <option value="1">Audi</option>
+                                    <option value="2">Audi</option>
+                                    <option value="3">Audi</option>
+                                    <option value="4">Audi</option>
+                                    <option value="5">Audi</option>
+                                    <option value="6">Audi</option>
+                                </select>
+                            </div>
+                            <div class="left_menus_select_block_auto">
+                                <select name="" id="main-country-select" class="country_block_select_auto">
+                                    <option value="">Модель</option>
+                                    <option value="7">Audi</option>
+                                    <option value="1">Audi</option>
+                                    <option value="2">Audi</option>
+                                    <option value="3">Audi</option>
+                                    <option value="4">Audi</option>
+                                    <option value="5">Audi</option>
+                                    <option value="6">Audi</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="left_menus_checkbox_block_auto">
+                                    <input type="checkbox" class="red-checkbox-catalog-auto">
+                                    <span>Обмен</span>
+                                </label>
+                            </div>
+                            <div class="left_menus_article_auto">Регион</div>
+                            <div class="left_menus_select_block_auto">
+                                <select name="" id="main-country-select" class="country_block_select_auto">
+                                    <option value="">Беларусь</option>
+                                    <option value="7">Audi</option>
+                                    <option value="1">Audi</option>
+                                    <option value="2">Audi</option>
+                                    <option value="3">Audi</option>
+                                    <option value="4">Audi</option>
+                                    <option value="5">Audi</option>
+                                    <option value="6">Audi</option>
+                                </select>
+                            </div>
+                            <div class="left_menus_select_block_auto">
+                                <select name="" id="main-country-select" class="country_block_select_auto">
+                                    <option value="">Все области</option>
+                                    <option value="7">Audi</option>
+                                    <option value="1">Audi</option>
+                                    <option value="2">Audi</option>
+                                    <option value="3">Audi</option>
+                                    <option value="4">Audi</option>
+                                    <option value="5">Audi</option>
+                                    <option value="6">Audi</option>
+                                </select>
+                            </div>
+                            <div class="left_menus_select_block_auto">
+                                <select name="" id="main-country-select" class="country_block_select_auto">
+                                    <option value="">Все города</option>
+                                    <option value="7">Audi</option>
+                                    <option value="1">Audi</option>
+                                    <option value="2">Audi</option>
+                                    <option value="3">Audi</option>
+                                    <option value="4">Audi</option>
+                                    <option value="5">Audi</option>
+                                    <option value="6">Audi</option>
+                                </select>
+                            </div>
+                            <div class="left_menus_article_auto">Коробка передач</div>
+                            <div class="type_auto">
+                                <label class="left_menus_checkbox_block_auto">
+                                    <input type="checkbox" class="red-checkbox-catalog-auto">
+                                    <span>Автомат</span>
+                                </label>
+                                <label class="left_menus_checkbox_block_auto">
+                                    <input type="checkbox" class="red-checkbox-catalog-auto">
+                                    <span>Механика</span>
+                                </label>
+                            </div>
+                            <div class="left_menus_select_block_auto">
+                                <select name="" id="main-country-select" class="country_block_select_auto">
+                                    <option value="">Выбирите тип кузова</option>
+                                    <option value="7">Audi</option>
+                                    <option value="1">Audi</option>
+                                    <option value="2">Audi</option>
+                                    <option value="3">Audi</option>
+                                    <option value="4">Audi</option>
+                                    <option value="5">Audi</option>
+                                    <option value="6">Audi</option>
+                                </select>
+                            </div>
+                            <div class="left_menus_article_auto">Тип топлива</div>
+                            <div class="type_auto">
+                                <label class="left_menus_checkbox_block_auto">
+                                    <input type="checkbox" class="red-checkbox-catalog-auto">
+                                    <span>Бензин</span>
+                                </label>
+                                <label class="left_menus_checkbox_block_auto">
+                                    <input type="checkbox" class="red-checkbox-catalog-auto">
+                                    <span>Дизель</span>
+                                </label>
+                                <label class="left_menus_checkbox_block_auto">
+                                    <input type="checkbox" class="red-checkbox-catalog-auto">
+                                    <span>Электро</span>
+                                </label>
+                                <label class="left_menus_checkbox_block_auto">
+                                    <input type="checkbox" class="red-checkbox-catalog-auto">
+                                    <span>Гибрид</span>
+                                </label>
+                                <label class="left_menus_checkbox_block_auto">
+                                    <input type="checkbox" class="red-checkbox-catalog-auto">
+                                    <span>Пропан-бутан</span>
+                                </label>
+                                <label class="left_menus_checkbox_block_auto">
+                                    <input type="checkbox" class="red-checkbox-catalog-auto">
+                                    <span>Метан</span>
+                                </label>
+                            </div>
+                            <div class="left_menus_select_block">
+                                <div class="catalog-left-side-inputs-auto">
+                                    <span class="catalog-left-side-inputs-auto-prise-article">Объем двигателя,
+                                        см3</span>
+                                    <div class="price_checker_block">
+                                        <input type="number" class="price_checker_left_auto">
+                                        <input type="number" class="price_checker_right_auto">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="left_menus_select_block_auto">
+                                <select name="" id="main-country-select" class="country_block_select_auto">
+                                    <option value="">Привод</option>
+                                    <option value="7">Передний</option>
+                                    <option value="1">Задний</option>
+                                    <option value="2">Полный</option>
+                                </select>
+                            </div>
+                            <div class="state-block">
+                                <h4>Состояние</h4>
+                                <div class="hide-state-btn hide">скрыть</i></div>
+                                <div class="show-state-btn">открыть</div>
+                                <div class="hide-show-state catalog-left-side-inputs" style="display: none;">
+                                    <div class="type_auto">
+                                        <label class="left_menus_checkbox_block_auto">
+                                            <input type="checkbox" class="red-checkbox-catalog-auto">
+                                            <span>Новый</span>
+                                        </label>
+                                        <label class="left_menus_checkbox_block_auto">
+                                            <input type="checkbox" class="red-checkbox-catalog-auto">
+                                            <span>С пробегом</span>
+                                        </label>
+                                        <label class="left_menus_checkbox_block_auto">
+                                            <input type="checkbox" class="red-checkbox-catalog-auto">
+                                            <span>С повреждением</span>
+                                        </label>
+                                        <label class="left_menus_checkbox_block_auto">
+                                            <input type="checkbox" class="red-checkbox-catalog-auto">
+                                            <span>На запчасти</span>
+                                        </label>
+                                    </div>
+                                    <div class="left_menus_select_block">
+                                        <div class="catalog-left-side-inputs-auto">
+                                            <span class="catalog-left-side-inputs-auto-prise-article">Пробег</span>
+                                            <div class="price_checker_block">
+                                                <input type="number" class="price_checker_left_auto">
+                                                <input type="number" class="price_checker_right_auto">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="additionally-block">
+                                <h4>Дополнительно</h4>
+                                <div class="hide-additionally-btn hide">скрыть</i></div>
+                                <div class="show-additionally-btn">открыть</div>
+                                <div class="hide-show-additionally catalog-left-side-inputs" style="display: none;">
+                                    <div class="left_menus_select_block_auto">
+                                        <select name="" id="main-country-select" class="country_block_select_auto">
+                                            <option value="">Цвет</option>
+                                            <option value="7">Audi</option>
+                                            <option value="1">Audi</option>
+                                            <option value="2">Audi</option>
+                                            <option value="3">Audi</option>
+                                            <option value="4">Audi</option>
+                                            <option value="5">Audi</option>
+                                            <option value="6">Audi</option>
+                                        </select>
+                                    </div>
+                                    <div class="left_menus_select_block_auto">
+                                        <select name="" id="main-country-select" class="country_block_select_auto">
+                                            <option value="">Материал салона</option>
+                                            <option value="1">Audi</option>
+                                            <option value="2">Audi</option>
+                                            <option value="3">Audi</option>
+                                            <option value="4">Audi</option>
+                                            <option value="5">Audi</option>
+                                            <option value="6">Audi</option>
+                                        </select>
+                                    </div>
+                                    <div class="left_menus_select_block_auto">
+                                        <select name="" id="main-country-select" class="country_block_select_auto">
+                                            <option value="">Цвет салона</option>
+                                            <option value="1">Audi</option>
+                                            <option value="2">Audi</option>
+                                            <option value="3">Audi</option>
+                                            <option value="4">Audi</option>
+                                            <option value="5">Audi</option>
+                                            <option value="6">Audi</option>
+                                        </select>
+                                    </div>
+                                    <div class="type_auto">
+                                        <label class="left_menus_checkbox_block_auto">
+                                            <input type="checkbox" class="red-checkbox-catalog-auto">
+                                            <span>Продавец — частное лицо</span>
+                                        </label>
+                                        <label class="left_menus_checkbox_block_auto">
+                                            <input type="checkbox" class="red-checkbox-catalog-auto">
+                                            <span>Продавец — компания</span>
+                                        </label>
+                                        <label class="left_menus_checkbox_block_auto">
+                                            <input type="checkbox" class="red-checkbox-catalog-auto">
+                                            <span>Цена с НДС</span>
+                                        </label>
+                                    </div>
+                                    <div class="left_menus_select_block_auto">
+                                        <select name="" id="main-country-select" class="country_block_select_auto">
+                                            <option value="">Обмен</option>
+                                            <option value="1">Audi</option>
+                                            <option value="2">Audi</option>
+                                            <option value="3">Audi</option>
+                                            <option value="4">Audi</option>
+                                            <option value="5">Audi</option>
+                                            <option value="6">Audi</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+    <div class="mobile-btn-for-auto-catalog-menu">
+        Параметры
+    </div>
+    <div class="popup-fade">
+        <div class="popup">
+            <a class="popup-close" href="#">X</a>
+            <div class="popup-close-article">Свяжитесь с продавцом</div>
+            <div class="popup-close-text">г.Минск ул.Победы</div>
+            <div class="popup-close-text">+375 xx xxx-xx-xx</div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
